@@ -11,6 +11,6 @@ public class ASESearcher {
 	
 	public void startUserQuery(){
 		//get user input in loop
-		System.out.println("Hello, we are searching. ^^");
+		//System.out.println("Hello, we are searching. ^^");
 	}
 }

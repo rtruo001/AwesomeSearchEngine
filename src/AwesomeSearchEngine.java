@@ -25,7 +25,7 @@ public class AwesomeSearchEngine {
 	public static Directory index;
 	
 	public static void main(String[] args){
-		
+		System.out.println("asdfsadf");
 		//Create instance of Directory
 		index = new RAMDirectory();
 		

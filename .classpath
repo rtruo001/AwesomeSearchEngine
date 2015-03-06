@@ -5,5 +5,6 @@
 	<classpathentry kind="lib" path="/Users/mikejuyoon/Code/eclipseprojects/dependencies/lucene-analyzers-common-5.0.0.jar"/>
 	<classpathentry kind="lib" path="/Users/mikejuyoon/Code/eclipseprojects/dependencies/lucene-core-5.0.0.jar"/>
 	<classpathentry kind="lib" path="/Users/mikejuyoon/Code/eclipseprojects/dependencies/lucene-queryparser-5.0.0.jar"/>
+    <classpathentry kind="lib" path="/Users/mikejuyoon/Code/eclipseprojects/dependencies/jsoup-1.8.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
