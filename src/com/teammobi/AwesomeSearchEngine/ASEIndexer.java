@@ -35,7 +35,7 @@ public class ASEIndexer {
 		try{
 		    config = new IndexWriterConfig(contextAnalyzer);
 		    indexWriter = new IndexWriter(contextDirectory, config);
-			System.out.println("asdfasdf");
+			System.out.println(dirPath);
 			if(!Files.exists(Paths.get(dirPath)) ){
 				System.out.println("not even there bro");
 			}

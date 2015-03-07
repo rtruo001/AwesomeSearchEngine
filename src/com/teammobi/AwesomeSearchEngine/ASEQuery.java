@@ -22,6 +22,8 @@ import org.json.JSONObject;
 public class ASEQuery extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static AwesomeSearchEngine searchEngine;
+	
+	private static String websitesDir;
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -30,6 +32,19 @@ public class ASEQuery extends HttpServlet {
         super();
         // TODO Auto-generated constructor stub
         searchEngine = new AwesomeSearchEngine();
+        
+//        if(getServletContext() == null){
+//        	System.out.println("wtf");
+//        }
+//        websitesDir = getServletContext().getRealPath("/WEB-INF/");
+//        System.out.println(websitesDir);
+//        searchEngine.index(websitesDir);
+//        try{
+//        PrintWriter writer = new PrintWriter("hehe.txt", "UTF-8");
+//        writer.println("The first line");
+//        writer.println("The second line");
+//        writer.close();
+//        }catch(Exception e){System.out.println("cant do it bro"); e.printStackTrace();}
     }
 
 	/**
@@ -38,6 +53,10 @@ public class ASEQuery extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//HttpServletRequest getParameter
+      websitesDir = getServletContext().getRealPath("/WEB-INF/");
+      System.out.println(websitesDir);
+      searchEngine.index(websitesDir);
+		
 		
 		//searchEngine = new AwesomeSearchEngine();
 		String query = "ucr";
