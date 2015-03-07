@@ -1,0 +1,156 @@
+
+
+ 
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>UCR Campus Map Beta</title>
+<!-- Google Universal Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3051875-1', 'ucr.edu');
+  ga('send', 'pageview');
+</script>
+<script type="text/javascript">
+if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/Blackberry/)) || (navigator.userAgent.match(/Android/)) || (navigator.userAgent.match(/iPod/i)))
+{location.replace("mobile.html");}
+</script>
+<style type="text/css">
+ span{cursor:pointer;}
+</style>
+<link type="text/css" rel="stylesheet" href="//www.ucr.edu/min/g=6bis-bluea-wide2" media="all" />
+<link type="text/css" rel="stylesheet" href="//www.ucr.edu/min/f=css/print6.css" media="print" />
+
+<link rel="stylesheet" type="text/css" href="/css/local.css" media="all" />
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="//www.ucr.edu/min/g=js2"></script>
+<script type="text/javascript" src="ProojectedOverlay.js"></script>
+<script type="text/javascript" src="geoxml3.js"></script>
+<script type="text/javascript" src="UCRCampusMap1.js"></script>
+<script type="text/javascript" src="customPano.js"></script>
+<script type="text/javascript">
+var viewResource = function(val){ return "<div id='my_resource' style='text-align:left;padding:10px;' ><p>The information provide here is from the Riverside Transit Agency's website and is being provided to the UCR constituancy as a service. For more information regarding schedules and routes plase see their <a href='http://www.riversidetransit.com/home/index.php?option=com_content&view=article&id=116&Itemid=106' rel='nofollow' target='infor_win'>website</a>. For other inforamation regarding parking or UCR Transportation please <a href='http://www.parking.ucr.edu/'>contact taps</a>.</p>"+
+"<p><strong>**Crest Cruiser/Bear Runner only operate during the academic year</strong></p><p><select onchange='document.getElementById(\"infor_win\").src=this.value'>"+
+"<option value='http://www.riversidetransit.com/home/images/stories/DOWNLOADS/ROUTES/001.pdf'>Route 1 – Service from UCR to Riverside Plaza, Galleria at Tyler, Corona Transit Center</option>"+
+"<option value='http://www.riversidetransit.com/home/images/stories/DOWNLOADS/ROUTES/014.pdf'>Route 14 – Service from Loma Linda to UCR and Galleria at Tyler</option>"+
+"<option value='http://www.riversidetransit.com/home/images/stories/DOWNLOADS/ROUTES/016.pdf'>Route 16 – Service from UCR to Canyon Crest Towne Center and Moreno Valley Mall</option>"+
+"<option value='http://www.riversidetransit.com/home/images/stories/DOWNLOADS/ROUTES/051.pdf'>Route 51 Crest Cruiser** – Service from UCR to Canyon Crest Towne Center</option>"+
+"<option value='http://www.riversidetransit.com/home/images/stories/DOWNLOADS/ROUTES/053.pdf'>Route 53 – Bear Runner** – Evening service UCR to Canyon Crest Towne Center</option>"+
+"<option value='http://www.riversidetransit.com/home/images/stories/DOWNLOADS/ROUTES/204.pdf'>**Express Route 204 – Service between Montclair Transcenter and UCR with stops in Ontario and Jurupa</option>"+
+"<option value='http://www.riversidetransit.com/home/images/stories/DOWNLOADS/ROUTES/208.pdf'>**Express Route 208 – Service between Temecula and UCR with stops in Murrieta, Sun City, and Perris</option>"+
+"<option value='http://www.riversidetransit.com/home/images/stories/DOWNLOADS/ROUTES/212.pdf'>**Express Route 212 - Service between San Jacinto and UCR witn stops in Hemet and Perris</option></select><iframe style='margin-left:-10px;margin-top:15px;' id='infor_win' src='"+val+"'></iframe></p></div>";}
+
+var imageDisplay = function (img){ return "<img src='"+img+"'  style='width:auto !important;height:400px !important;display:block;margin:10px auto auto !important;'>";
+} 
+
+
+</script>
+
+<link rel="stylesheet" type="text/css" href="MainMap.css" media="all"/>
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="css/ie.css" media="all" />
+<![endif]-->
+</head>
+<body >
+
+<div class="branding">
+
+<div id="search-detail"></div>
+<div id="locations-detail">
+ 
+
+</div>
+<div id="legend-detail"></div>
+<div id="legend-settings"></div>
+<div id="directions-detail" >
+</div>
+<div id="mast_head">
+  <h2><a href="http://ucr.edu/"><span class="accessibility">UCR Campus Map <!--sup style="font-size: 0.31em; font-style: italic; color: rgb(241, 171, 0); font-weight: bold;">BETA</sup--></span></a><a href="http://campusmap.ucr.edu/campus-Map.php"></a><!--img src="images/beta_logo.png"/--></h2>
+</div>
+
+<div id="main_nav" >
+<span tabindex="0" id="l_legend_detail" onmouseover="document.getElementById('f_img_le').src='images/feedback2.png'" onmouseout="document.getElementById('f_img_le').src='images/feedback.png'" onclick="document.location='feedback.html'" onkeydown="function(e){if(e.keyCode==13){document.location='feedback.html';}}">
+<!-- onclick="getNewWindow('DIV','legend-detail',legend)" onkeydown="handleMyKeyEvent(event,'DIV','legend-detail',legend)"-->
+<img id="f_img_le" src="images/feedback.png" alt="feedback"/>
+Feedback</span>
+<span tabindex="0" id="l_search_detail" onmouseover="document.getElementById('f_img_s').src='images/search_over.png'" onmouseout="document.getElementById('f_img_s').src='images/search1.png'"  onclick="getNewWindow('DIV','search-detail',searchB)" onkeydown="handleMyKeyEvent(event,'DIV','search-detail',searchB)">
+<img  id="f_img_s" src="images/search1.png"/>
+Search</span>
+<span tabindex="0" id="l_locations_detail"  onmouseover="document.getElementById('f_img_l').src='images/locations_over.png'" onmouseout="document.getElementById('f_img_l').src='images/locations1.png'"   onclick="getNewWindow('DIV','locations-detail','val')" onkeydown="handleMyKeyEvent(event,'DIV','locations-detail','val')" >
+<img id="f_img_l" src="images/locations1.png"/>
+Locations</span>
+<span tabindex="0" id="l_search_detail1" onmouseover="document.getElementById('f_img_s1').src='images/hshuttle2.png'" onmouseout="document.getElementById('f_img_s1').src='images/hshuttle1.png'"  onclick="getNewWindow('DIV','Schedule-detail',viewResource(this.getAttribute('frm1')))" frm1="http://www.riversidetransit.com/home/images/stories/DOWNLOADS/ROUTES/001.pdf" onkeydown="handleMyKeyEvent(event,'DIV','Schedule-detail',viewResource(this.getAttribute('frm1')))">
+<img  id="f_img_s1" src="images/hshuttle1.png" />
+Bus Schedule</span>
+
+<span tabindex="0" id="l_search_detail1"  onclick="document.location='http://admissions.ucr.edu/VisitUCR/virtualTours'" onmouseout="document.getElementById('f_img_s1q').src='images/360-0.png'" onmouseover="document.getElementById('f_img_s1q').src='images/360-1.png'">
+<img  id="f_img_s1q" src="images/360-0.png"  />
+Virtual Tours</span>
+
+
+
+
+<!--span tabindex="6" id="l_legend_settings" onmouseover="document.getElementById('f_img_se').src='images/settings_over.png'" onmouseout="document.getElementById('f_img_se').src='images/settings1.png'"  onclick="getNewWindow('DIV','legend-settings',settings)" onkeydown="handleMyKeyEvent(event,'DIV','legend-settings',settings)">
+<img id="f_img_se" src="images/settings1.png"/>
+Settings</span-->
+</div>
+
+<ul class="l_map_list_footer" >
+<li><a href="/campus-Map.php" tabindex='0'>Old Campus Map</a></li>
+<li><a href='javascript:void(0)' style='color:white;text-decoration:none;border:0;' onmouseout='this.style.color="#FFFFFF"' tabindex='0' onmouseover='this.style.color="#F1Ab00"' onclick="getNewWindow('DIV','directions-detail',directionD)">Directions to UCR Campus</a></li><li><a indextab='0' style='color:white;text-decoration:none;border:0;' onmouseout='this.style.color="#FFFFFF"' onmouseover='this.style.color="#F1Ab00"'  href="http://campusmap.ucr.edu/map-color.pdf">Large-Format Printable Map</a></li><li><a indextab='0' style='color:white;text-decoration:none;border:0;' onmouseout='this.style.color="#FFFFFF"' onmouseover='this.style.color="#F1Ab00"'  href="http://campusmap.ucr.edu/map.pdf">8½×11  Printable Map</a></li></ul>
+</div>
+
+<div tabindex="10" id="map_canvas" class="map_canvas">
+
+</div>
+<div class="footer">
+<div>
+
+</div>
+   <div id="footerwrapper">
+      <div id="prefooter">
+         <div class="column2">
+            <h3>General Campus Information</h3>
+            <address>University of California, Riverside<br />900 University Ave.<br />
+            Riverside, CA 92521<br /><br />Tel: (951) 827-1012<br />E-mail: <a href="mailto:ucr@ucr.edu">ucr@ucr.edu</a><br /><br /><br /></address>
+         </div>
+         <div class="column2">
+            <h3>Campus Parking Information</h3>
+            <address>There is a charge for visitor parking.
+            More information is available at <a href="http://www.parking.ucr.edu">Transportation and Parking Services</a><br /><br />
+            <strong>Parking information:</strong> (951) 827-4395<br />
+            Monday&ndash;Friday, 8 a.m.&ndash;4 p.m.<br /><br />
+After hours: <strong>Campus Police</strong> (951) 827-5222</address>
+
+         </div>
+         <div class="column2R">
+            <h3>Additional Information</h3>
+            <address><strong>Receiving</strong><br />
+            3401 Watkins Drive<br />
+            Riverside, CA 92521  <br /><br />
+            <strong>Admissions/Campus Tours</strong><br />
+            Office of Undergraduate Recruitment-Tours<br />(951) 827-TOUR<br />
+            <a href="http://admissions.ucr.edu/VisitUCR">Campus Tours</a></address>
+         </div>
+         <div class="clear"></div>
+      </div>
+      <div id="footer">
+         <ul>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="http://www.ucr.edu/privacy.html">Privacy Policy</a></li>
+
+            <li><a href="http://www.ucr.edu/terms.html">&copy; 2014 Regents of the University of California</a></li>
+         </ul>
+      </div>
+
+   </div>
+<script type="text/javascript" src="MapInits.js"></script>
+</div>
+</body>
+</html>
+<!-- Generated in 0.179386 seconds using 1.75 MiB of memory. -->
+

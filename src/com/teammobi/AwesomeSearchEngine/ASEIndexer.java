@@ -1,3 +1,5 @@
+package com.teammobi.AwesomeSearchEngine;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -33,10 +35,14 @@ public class ASEIndexer {
 		try{
 		    config = new IndexWriterConfig(contextAnalyzer);
 		    indexWriter = new IndexWriter(contextDirectory, config);
-			
+			System.out.println("asdfasdf");
+			if(!Files.exists(Paths.get(dirPath)) ){
+				System.out.println("not even there bro");
+			}
 			Files.walk(Paths.get(dirPath)).forEach(filePath -> {
+				
 			    if (Files.isRegularFile(filePath)) {
-			        //System.out.println(filePath);
+			        System.out.println(filePath);
 			    	parseAndIndex(filePath.toString());
 			    }
 			});
