@@ -61,7 +61,7 @@ public class ASEQuery extends HttpServlet {
 			if(result == null) out.println(errorJSON.toString());
 			else out.println(result.toString());
 			out.close();
-		}	
+		}
 	}
 
 	/**

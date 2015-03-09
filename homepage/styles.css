@@ -1,3 +1,7 @@
+body {
+  background-color: black;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,19 +12,15 @@
 }
 
 #SearchBar {
-  background-image: url("InspirationalWallpaper.png"); 
-  background-attachment: fixed;
-  background-position: center center;
+  background-image: url("Bubbles.jpg"); 
   background-repeat: no-repeat;
 }
 
 #contentInSearchBar {
   margin-left: 40%;
   margin-right: 40%;
-  padding-top: 4%;
-  padding-bottom: 58%;
-  background-attachment: fixed;
-  
+  padding-top: 7%;
+  padding-bottom: 62%;  
 }
 
 #contentInSearchBar h1 {
@@ -44,7 +44,25 @@
 }
 
 #SearchChoices {
-  background-color: #66CCFF
+  background-color: rgba(0, 0, 0, .7);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  display: none;
+  left: 0;
+  top: 0;
+}
+
+#listOfSearches {
+  font-size: 35px;
+  color: #CCFFCC;
+}
+
+li#listOfSearches {
+  border-bottom: solid white;
+  padding-top: 0px;
+  margin-left: 50px;
 }
 
 #Button {
@@ -59,9 +77,14 @@
   outline: none;
 }
 
-#testFade {
-  padding: 50px; 
-  background-color: #89BC38;
-  text-align: center;
-  display: none;
+#closeButton {
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-left: 90%;
+  margin-top: 15%;
+  padding-bottom: 0px;
+  font-size: 20px;
 }

@@ -14,3 +14,5 @@ hs_err_pid*
 
 #dlFiles
 /WebContent/WEB-INF/dlFiles/
+/WebContent/WEB-INF/websites/
+/build/
