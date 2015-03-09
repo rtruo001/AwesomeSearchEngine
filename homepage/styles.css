@@ -55,6 +55,7 @@ body {
 }
 
 #listOfSearches {
+  text-align: center;
   font-size: 35px;
   color: #CCFFCC;
 }
@@ -62,7 +63,6 @@ body {
 li#listOfSearches {
   border-bottom: solid white;
   padding-top: 0px;
-  margin-left: 50px;
 }
 
 #Button {
