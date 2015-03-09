@@ -21,10 +21,9 @@ import org.json.JSONObject;
 @WebServlet("/ASEQuery")
 public class ASEQuery extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static AwesomeSearchEngine searchEngine;
+	private AwesomeSearchEngine searchEngine;
 	
 	private static String websitesDir;
-       
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -32,6 +31,7 @@ public class ASEQuery extends HttpServlet {
         super();
         // TODO Auto-generated constructor stub
         searchEngine = new AwesomeSearchEngine();
+        websitesDir = null;
         
 //        if(getServletContext() == null){
 //        	System.out.println("wtf");
@@ -53,16 +53,21 @@ public class ASEQuery extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//HttpServletRequest getParameter
-      websitesDir = getServletContext().getRealPath("/WEB-INF/");
-      System.out.println(websitesDir);
-      searchEngine.index(websitesDir);
+		PrintWriter out = response.getWriter();
 		
+		if(websitesDir == null){
+			websitesDir = getServletContext().getRealPath("/WEB-INF/websites/");
+			System.out.println("New instance: " + websitesDir);
+			searchEngine.index(websitesDir);
+		}else{
+			System.out.println("Previous instance: " + websitesDir);
+		}
 		
-		//searchEngine = new AwesomeSearchEngine();
-		String query = "ucr";
+		//String query = "ucr alumni";
+		String query = request.getQueryString();
+		System.out.println("Query String: " + query);
 		JSONObject result = searchEngine.search(query);
 		
-		PrintWriter out = response.getWriter();
 		if(result == null){
 			out.println("damn");
 		}else{

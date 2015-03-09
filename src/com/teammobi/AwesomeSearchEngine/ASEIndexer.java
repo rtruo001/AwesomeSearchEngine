@@ -35,14 +35,14 @@ public class ASEIndexer {
 		try{
 		    config = new IndexWriterConfig(contextAnalyzer);
 		    indexWriter = new IndexWriter(contextDirectory, config);
-			System.out.println(dirPath);
+			//System.out.println(dirPath);
 			if(!Files.exists(Paths.get(dirPath)) ){
 				System.out.println("not even there bro");
 			}
 			Files.walk(Paths.get(dirPath)).forEach(filePath -> {
 				
 			    if (Files.isRegularFile(filePath)) {
-			        System.out.println(filePath);
+			        //System.out.println(filePath);
 			    	parseAndIndex(filePath.toString());
 			    }
 			});

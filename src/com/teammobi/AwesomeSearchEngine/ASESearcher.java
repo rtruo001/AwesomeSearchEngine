@@ -10,6 +10,7 @@ import org.apache.lucene.queryparser.classic.ParseException;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.BooleanClause;
 import org.apache.lucene.search.IndexSearcher;
+import org.apache.lucene.search.PhraseQuery;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TermQuery;
@@ -33,22 +34,24 @@ public class ASESearcher {
 	public JSONObject query(String queryString) throws IOException, ParseException, JSONException{
 		
 		JSONObject resultJSON = new JSONObject();
-		
-
 		resultJSON.put("query", queryString);
-		//get user input in loop
-		//System.out.println("Hello, we are searching. ^^");
 		
-		//Scanner in = new Scanner(System.in);
-		//String queryString;
-		//while(true){
-		//System.out.println("Enter a string");
-	    //queryString = in.nextLine();
-	    //System.out.println("here is your string: " + queryString);
-	    
+		String delims = "[ ]+";
+		String[] queryTokens = queryString.split(delims);
+
 	    BooleanQuery booleanQuery = new BooleanQuery();
-	    Query query1 = new TermQuery(new Term("title", queryString));
-	    Query query2 = new TermQuery(new Term("body", queryString));
+	    PhraseQuery query1 = new PhraseQuery();
+	    query1.setSlop(1000);
+	    for(int i = 0 ; i < queryTokens.length ; i++){
+	    	query1.add(new Term("title", queryTokens[i]));
+	    }
+	    //new Term("title", queryString));
+	    PhraseQuery query2 = new PhraseQuery();
+	    query2.setSlop(1000);
+	    for(int i = 0 ; i < queryTokens.length ; i++){
+	    	query2.add(new Term("body", queryTokens[i]));
+	    }
+	    //new Term("body", queryString));
 	    booleanQuery.add(query1, BooleanClause.Occur.SHOULD);
 	    booleanQuery.add(query2, BooleanClause.Occur.SHOULD);
 
