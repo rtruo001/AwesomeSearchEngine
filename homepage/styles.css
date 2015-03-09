@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.entireWebPage {
+  margin: 0;
+}
+
+#SearchBar {
+  background-image: url("InspirationalWallpaper.png"); 
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+#contentInSearchBar {
+  margin-left: 40%;
+  margin-right: 40%;
+  padding-top: 4%;
+  padding-bottom: 58%;
+  background-attachment: fixed;
+  
+}
+
+#contentInSearchBar h1 {
+  color: #CCFFCC;
+  font: Helvetica;
+}
+
+#inputBar {
+  background-color: #CCFFCC;
+  width: 200px;
+  height: 20px;
+  border: none;
+  text-align: center;
+  border-top-right-radius: 50px 50px;
+  border-top-left-radius: 50px 50px;
+  border-bottom-right-radius: 50px 50px;
+  border-bottom-left-radius: 50px 50px;
+  color: #000000;
+  margin: 0 auto;
+  outline: none;
+}
+
+#SearchChoices {
+  background-color: #66CCFF
+}
+
+#Button {
+  width: 50px;
+  height: 20px;
+  border: none;
+  border-top-right-radius: 50px 50px;
+  border-top-left-radius: 50px 50px;
+  border-bottom-right-radius: 50px 50px;
+  border-bottom-left-radius: 50px 50px;
+  background-color: #CCFFCC;
+  outline: none;
+}
+
+#testFade {
+  padding: 50px; 
+  background-color: #89BC38;
+  text-align: center;
+  display: none;
+}

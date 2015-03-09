@@ -11,9 +11,7 @@ import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.BooleanClause;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.PhraseQuery;
-import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
-import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.TopScoreDocCollector;
 import org.apache.lucene.store.Directory;
 import org.json.JSONArray;
@@ -45,13 +43,12 @@ public class ASESearcher {
 	    for(int i = 0 ; i < queryTokens.length ; i++){
 	    	query1.add(new Term("title", queryTokens[i]));
 	    }
-	    //new Term("title", queryString));
+
 	    PhraseQuery query2 = new PhraseQuery();
 	    query2.setSlop(1000);
 	    for(int i = 0 ; i < queryTokens.length ; i++){
 	    	query2.add(new Term("body", queryTokens[i]));
 	    }
-	    //new Term("body", queryString));
 	    booleanQuery.add(query1, BooleanClause.Occur.SHOULD);
 	    booleanQuery.add(query2, BooleanClause.Occur.SHOULD);
 
@@ -70,12 +67,10 @@ public class ASESearcher {
 	      int docId = hits[i].doc;
 	      Document d = searcher.doc(docId);
 	      JSONObject currResult = new JSONObject();
-	      System.out.println(d.get("title"));
 	      currResult.put("title", d.get("title"));
-	      //currResult.put("body", "here is some text that will go in place of the body");
 	      //currResult.put("body", d.get("body"));
 	      resultsArr.put(currResult);
-	      //System.out.println((i + 1) + ". "+ "\t" + d.get("title"));
+	      System.out.println((i + 1) + ". "+ "\t" + d.get("title"));
 	    }
 	    reader.close();
 	    return resultJSON;
