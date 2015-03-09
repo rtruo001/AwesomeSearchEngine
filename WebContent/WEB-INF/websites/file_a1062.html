@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Visit UCR</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Content/css/plugins/bxSlider.css" />
+    <link rel="stylesheet" href="/Content/css/plugins/colorbox.css" />
+    <link rel="stylesheet" href="/Content/css/plugins/calendarEvents/calendarEvents.css" />
+    <link href="/Content/css/960Framwork/reset.min.css?432431" rel="stylesheet" />
+<link href="/Content/css/960Framwork/typographyBluePrint.min.css?432431" rel="stylesheet" />
+<link href="/Content/css/960Framwork/960.min.css?432431" rel="stylesheet" />
+<link href="/Content/css/nav.min.css?432431" rel="stylesheet" />
+<link href="/Content/css/local.min.css?432431" rel="stylesheet" />
+<link href="/Content/css/genericBody.min.css?432431" rel="stylesheet" />
+<link href="/Content/css/iconSections.min.css?432431" rel="stylesheet" />
+<link href="/Content/css/footer.min.css?43319a" rel="stylesheet" />
+
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="/Content/css/ie7_8.css" />
+    <![endif]-->
+    
+    <link rel="stylesheet" href="/Content/css/plugins/orbit-1.2.3.css" />
+    <style type="text/css">
+        div#weatherWrapperOuter
+        {
+            width: 350px;
+            height: 68px;
+            position: absolute;
+            top: -70px;
+        }
+
+        #weatherWidget .today
+        {
+            color: #000;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10px;
+            position: absolute;
+        }
+
+        #display_weather
+        {
+            margin-left: 130px;
+        }
+
+            #display_weather p
+            {
+                color: #5facea;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 10px;
+                margin: 0 0 3px 0;
+            }
+
+            #display_weather img
+            {
+                margin-top: -20px;
+            }
+
+        h3.stupid
+        {
+            font-size: 1.33em;
+            font-weight: bold;
+        }
+
+        h4.stupid
+        {
+            font-size: 1em;
+        }
+
+        div#featured
+        {
+            width: 700px;
+            height: 309px;
+        }
+
+        div.orbit-wrapper ul.orbit-bullets
+        {
+            left: 70%;
+        }
+    </style>
+    <!--[if lte IE 7]>
+        <style type="text/css">
+             div.innerPagebxsliderWrapper 
+        {
+            margin-top: -13px;
+        } 
+         div#weatherWidget .today
+        {
+           left: 0px;
+        } 
+            
+        </style>  
+       <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+    <!-- Below is used to link to reserouces in external JS files -->
+    <script type="text/javascript">
+        var baseURL = "/";
+    </script>
+    <script src="/Scripts/app.min.js?43859e" type="text/javascript"></script>
+    
+    <script src="/Scripts/Custom_New/jquery.bxSlider.min.js" type="text/javascript"></script>
+    <script src="/Scripts/Custom_New/selectiveLoad_plugins.js" type="text/javascript"></script>
+    <script src="/Scripts/Custom_New/functionCalls.js" type="text/javascript"></script>
+    <script src="/Scripts/calendarEvents/CalendarEvents.js" type="text/javascript"></script>
+
+    
+        
+    <script src="/Scripts/Custom_New/jquery.orbit-1.2.3.min.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery.simpleWeather-2.0.min.js" type="text/javascript"></script>
+    <script src="/Scripts/colorbox/jquery.colorbox.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('div#ctl00_PlaceHolderMain_ctl00__ControlWrapper_RichImageField').attr({
+                style: "display: block"
+            });
+            $('div#ctl00_PlaceHolderMain_ctl02__ControlWrapper_RichHtmlField').addClass('moveRight').attr({
+                style: ''
+            });
+            $('#weatherWrapperOuter').next().addClass('weatherImg');
+
+
+            $('a[href$="/admissions/visitUCR"]').parent().parent().attr({
+                style: "display: inline"
+            });
+
+
+            $.simpleWeather({
+                zipcode: '92521',
+                unit: 'f',
+                success: function (weather) {
+                    html = '<img style="float:left;" width="120px" src="' + weather.image + '">';
+                    html += '<p><strong>High:</strong> ' + weather.temp + '&deg; ' + weather.units.temp + '</p>';
+                    html += '<p><strong>Low:</strong> ' + weather.low + '&deg; ' + weather.units.temp + '</p>';
+
+                    $("#display_weather").html(html);
+                },
+                error: function (error) {
+                    $("#display_weather").html('<p>' + error + '</p>');
+                }
+            });
+
+            // Instantiate the ColorBox
+            $(".youtube").colorbox({
+                iframe: true,
+                innerWidth: 640,
+                innerHeight: 390
+            });
+        });
+
+        $(window).load(function () {
+            $('#featured').orbit({
+                animation: 'fade',                  // fade, horizontal-slide, vertical-slide, horizontal-push
+                timer: true, 			 // true or false to have the timer
+                advanceSpeed: 4000, 		 // if timer is enabled, time between transitions 
+                pauseOnHover: true, 		 // if you hover pauses the slider
+                startClockOnMouseOut: true, 	 // if clock should start on MouseOut
+                startClockOnMouseOutAfter: 0, 	 // how long after MouseOut should the timer start again
+                directionalNav: false, 		 // manual advancing directional navs
+                bullets: true			 // true or false to activate the bullet navigation
+            });
+        });
+    </script>
+
+    <!--Google Analytics Tracking Code -->
+    
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-503078-52', 'auto');
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview');
+
+</script>
+    <style type="text/css">
+        #translateContainer {
+            border:none;            
+            text-align:center;            
+        }
+            #translateContainer h3 {
+                line-height:30px;
+                background-color:#2d6cc0;
+                color:#fff;
+                font-family: Verdana,Arial,Helvetica,sans-serif;
+                font-size:15px;
+            }
+    </style>
+    <!-- Google Translate Customization Code -->    
+    <meta name="google-translate-customization" content="40b506c3c9978d85-07cd07d0d7fc1236-gd88b6ab26a0907c6-12"></meta>
+</head>
+<body>
+    <div id="headerWrapper">
+        <div class="container_16">
+            <div id="masthead" class="clearfix">
+                <div class="grid_16">
+                    <img alt="UCRMonogram" class="UCRMonogram" src="/Images/ucrSealOverlay.png" width="346" height="145" />
+                    <div id="mastHeadTop">
+                        <h1>
+                            <a href="/" class="h1Link">
+                                <img alt="UCR Logo" src="/Images/ucrSeal.png" />
+                                <span class="hideText">University of California - UC Riverside</span><br />
+                                <span class="spanHeaderUA">Undergraduate Admissions</span> </a>
+                        </h1>
+                    </div>
+                    <div id="mastHeadBottom">
+                        <div id="button">
+                            <img alt="th" class="menu_class" src="/Images/quicklinks.png" />
+                            <ul class="the_menu" style="display: none;">
+                                <li><a href="http://vcsaweb.ucr.edu/MyUCR/CreateAccount.aspx">MyUCR</a></li>
+                                <li><a href="/Admissions/pathsAdmissions">Paths to Admission</a> </li>
+                                <li><a href="/Admissions/meetCounselor">Find a Counselor</a></li>
+                                <li><a href="/PayingForCollege/financialAidScholarships">Financial Aid &amp; Scholarships</a></li>
+                                <li><a href="/Academics/collegesSchoolsMajors">Colleges, Schools &amp; Majors</a></li>
+                                <li><a href="/CampusLife/housing">Housing</a></li>
+                                <li><a href="/VisitUCR/tourOptions">Tour Options</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_16 clearfix">
+                    <div id="search">
+                        <div class="breadcrumbs">
+
+    <a href="/">Home</a>
+         &gt; 
+
+    Visit UCR
+</div>
+                        <div id="nav_utility">
+                            <ul>
+                                <li><a href="http://www.ucr.edu/alpha.html">A to Z Listing</a></li>
+                                <li><a href="http://www.campusmap.ucr.edu/">Campus Map</a></li>
+                                <li><a href="http://www.ucr.edu/find_people.php">Find People</a></li>
+                            </ul>
+                        </div>
+                        <form action="http://www.ucr.edu/search.php" id="searchbox">
+                        <p>
+                            <label accesskey="4" for="SearchText" style="visibility: hidden;">
+                                Search for:</label>
+                            <input type="text" value="" name="q" id="SearchText" maxlength="255" size="19" style="border: 1px solid rgb(126, 157, 185);
+                                padding: 2px; background: url(http://www.ucr.edu/images/design6/search_watermark.gif) no-repeat scroll left center rgb(255, 255, 255);" />
+                            <input type="submit" value="Go" name="sa" id="go" />
+                        </p>
+                        </form>
+                        <script src="http://www.ucr.edu/js/watermark.js" type="text/javascript"></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end Header Wrapper -->
+    </div>
+    <!-- end Header Wrapper -->
+    <div id="mainContent">
+        <div id="box">
+            <a href="http://vcsaweb.ucr.edu/MyUCR/">MyUCR</a>
+            <a href="/Home/FAQ">FAQs</a>
+            <a href="/VisitUCR/virtualTours">Virtual Tours</a>
+            <a href="https://www.facebook.com/ucradmissions?bcode=q099X" class="facebook">Facebook</a> 
+            <a href="http://twitter.com/ucradmissions" class="twitter">Twitter</a>
+            <a href="http://lifeatucr.tumblr.com/" class="tumblr">Tumblr</a>
+            <a href="http://instagram.com/lifeatucr" class="instagram">Instagram</a>
+        </div>
+        <!-- Floating box stops here -->
+        <div class="container_16 clearfix">
+            <div class="grid_4 alpha">
+                <div id="navigation" class="clearfix">
+<div id="sidebar">
+    <div class="nav">
+        <ul>
+            <li class="home"><a href="/">Home</a></li>
+        </ul>
+        <ul class="audienceNav">
+            <li>Who Are You?</li>
+            <li><a href="/Home/freshmen">Freshmen</a></li>
+            <li><a href="/Home/transfer">Transfers</a></li>
+            <li><a href="http://international.ucr.edu">International</a></li>
+            <li><a href="/Home/outofstate">Out-of-State</a></li>
+            <li><a href="/Home/military">Military/Veterans</a></li>
+            <li><a href="/Home/parents">Parents</a></li>
+            <li><a href="/Home/counselors">Counselors</a></li>
+
+        </ul>
+        <ul>
+            <li><a href="/WhyUCR">Why UC Riverside?</a>
+                <ul>
+                    <li><a href="/WhyUCR/ourStudents">Our Students</a></li>
+                    <li><a href="/WhyUCR/ourRankings">Our Rankings</a></li>
+                    <li><a href="/WhyUCR/ourResearch">Our Research</a></li>
+                    <li><a href="/WhyUCR/ourGuarantee">Our Guarantee</a></li>
+                </ul>
+            </li>
+            <li><a href="/Academics">Academics</a>
+                <ul>
+                    <li><a href="/Academics/collegesSchoolsMajors">Colleges, Schools &amp; Majors</a></li>
+                    <li><a href="/Academics/honorsPrograms">Honors Programs</a></li>
+                    <li><a href="/Academics/faculty">Faculty</a></li>
+                    <li><a href="/Academics/supportServices">Support Services</a></li>
+                    <li><a href="/Academics/studyAwayHome">Study Away from Home</a></li>
+                    <li><a href="/Academics/transferprep">Special Transfer Programs</a></li>
+                </ul>
+            </li>
+            <li><a href="/CampusLife">Campus Life</a>
+                <ul>
+                    <li><a href="/CampusLife/housing">Housing</a></li>
+                    <li><a href="/CampusLife/gettingInvolved">Getting Involved</a></li>
+                    <li><a href="/CampusLife/artsEvents">Arts &amp; Events</a></li>
+                    <li><a href="/CampusLife/athleticsRecreation">Athletics &amp; Recreation</a></li>
+                    <li><a href="/CampusLife/safetyWellness">Safety &amp; Wellness</a></li>
+                </ul>
+            </li>
+
+
+
+            <li><a href="/Admissions">Admission</a>
+                <ul>
+                    <li><a href="/Admissions/datesDeadlines">Dates &amp; Deadlines</a></li>
+                    <li><a href="/Admissions/pathsAdmissions">Freshman/Transfer Admission</a></li>         
+                    <li><a href="/Admissions/meetCounselor">Meet Your Counselor</a></li>
+                </ul>
+            </li>
+
+
+
+            <li><a href="/PayingForCollege">Paying for College</a>
+                <ul>
+                    <li><a href="/PayingForCollege/financialAidScholarships">Financial Aid &amp; Scholarships</a></li>
+                    <li><a href="/PayingForCollege/costEstimator">Cost Estimator</a></li>
+                </ul>
+            </li>
+            <li><a class="current" href="/VisitUCR">Visit UCR</a>
+                <ul>
+                    <li><a href="/VisitUCR/tourOptions">Tour Options</a>
+                        <ul>
+                            <li><a href="/VisitUCR/virtualTours">Virtual Tours</a></li>
+                            <li><a href="/VisitUCR/selfGuided">Self-Guided</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/VisitUCR/planVisit">Plan Your Visit</a>
+                        <ul>
+                            <li><a href="/VisitUCR/hotelsDining">Hotels &amp; Dining</a></li>
+                            <li><a href="/VisitUCR/attractions">Attractions</a></li>
+                            <li><a href="/VisitUCR/gettingHere">Getting Here</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/VisitUCR/faq">Tour FAQs</a></li>
+                    <li><a href="/VisitUCR/aboutUs">About Us</a></li>
+                    <li><a href="/VisitUCR/campusTourGuide">Be a Campus Tour Guide</a></li>
+                </ul>
+            </li>
+            <li><a href="/Apply">Apply Now</a></li>
+            <li><a href="/Home/FAQ">FAQs</a></li>
+            <li><a href="/Home/printableResources">Printable Resources</a></li>
+
+            <li><a href="/Admissions/meetCounselor">Contact Us</a></li>
+        </ul>
+        <ul class="audienceNav" style="margin-top: 20px;">
+            <li>MyUCR Account</li>
+            <li><a href="http://vcsaweb.ucr.edu/MyUCR/CreateAccount.aspx">Open a New Account</a></li>
+            <li><a href="http://vcsaweb.ucr.edu/MyUCR/">Log in Now</a></li>
+
+        </ul>
+    </div>
+</div>
+                    
+                    <!-- Begin Google Translate -->
+                    <div id="translateContainer">
+                        <h3>
+                            Translate&nbsp;
+                            <img alt="Translate" src=/Images/icons/flagChinese_18.png />
+                            <img alt="Translate" src=/Images/icons/flagKorea_18.png />
+                            <img alt="Translate" src=/Images/icons/flagHindu_18.png />
+                            <img alt="Translate" src=/Images/icons/flagArab_18.png />
+                        </h3>
+                        <div id="google_translate_element"></div>
+                        <script type="text/javascript">
+                            function googleTranslateElementInit() {
+                                new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+                            }
+                        </script>
+                        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                    </div>
+                    <!-- End Google Translate -->
+                    
+                </div>
+                <div>
+                    <a style="margin-top: 35px; display: block; color: #362F2D; font-weight: 700; text-align: center;
+                        width: 200px;" href="http://itunes.apple.com/nz/app/myucr-mobile/id417130774?mt=8&ls=1">
+                        <img alt="Get the MyUCR Mobile Application" src="/Images/myUCRMobilIcon.png" style="margin-bottom: 10px;" /><br />
+                        Download MyUCR Mobile to your iPhone or iPod Touch!</a>
+                </div>
+                <div>
+                    <a style="margin-top: 35px; display: block; color: #362F2D; font-weight: 700; text-align: center;
+                        width: 200px;" href="/VisitUCR/virtualTours">
+                        <img alt="Virtual Tours" src="/Images/virtual-tour.png" style="margin-bottom: 10px;" /><br />
+                        Take a UCR Campus Virtual Tour!</a>
+                </div>
+                <script type="text/javascript" 
+src="https://www.intelliworkschat.com/a/Hello?ti=0ef230ec-7b18-4dc1-9d65-e9fb13ca9e9c;cid=d6a605ab-c97a-4a87-a2c7-e3f8a0be192f;v=2"></script>
+            </div>
+            <div class="grid_12 omega">
+                
+
+<div style="position: relative; width: 100%;">
+    <div id="weatherWrapperOuter">
+        <div id="weatherWidget">
+            <div class="today">
+                <script type="text/javascript" src="/Scripts/dateFunction.js"></script>
+            </div>
+            <div id="display_weather">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="innerPagebxsliderWrapper clearfix">
+    <div class="bxsliderMarkerLeft checkbox">
+        <p class="verd">
+            Admissions<br />
+            <span>Check Box</span>
+        </p>
+    </div>
+    <div class="demo-wrap" id="innerPagebxslider">
+        <ul id="slider1" class="multiple">
+            <li><a href="http://vcsaweb.ucr.edu/MyUCR/">
+                <img alt="" src="/Images/AdmissionsCheckboxThumbs/create-myucr.png" width="63"
+                height="52" />
+                <strong>Create a MyUCR Account</strong> <span>Get updates and<br /> track your admission status.</span></a>
+            </li>  
+                      
+            <li><a href="/WhyUCR">            
+                <img alt="" src="/Images/AdmissionsCheckboxThumbs/50-reasons.png" width="63"
+                height="52" />
+                <strong>Why UC Riverside?</strong> <span>50 good reasons to choose us.</span></a>
+            </li>   
+                     
+            <li><a href="http://admissions.ucr.edu/WhyUCR/ourRankings">
+                <img alt="" src="/Images/AdmissionsCheckboxThumbs/ranking.png" width="63"
+                height="52" />
+                <strong>We Rank High</strong><span>See how we rank in what matters.</span>
+            </a></li>
+
+            <li><a href="http://student08.ucr.edu/em/visitUCR/default.aspx">
+                <img alt="" src="/Images/AdmissionsCheckboxThumbs/tours.png" width="63"
+                height="52" />
+                <strong>Take a Tour</strong> <span>Visit UCR, see housing and explore the campus.</span>
+            </a></li>
+
+            <li><a href="mailto:admit@ucr.edu">
+                <img alt="" src="/Images/AdmissionsCheckboxThumbs/contact-counselor.png" width="63"
+                height="52" />
+                <strong>Talk to Us</strong> <span>Contact an admissions counselor.</span>
+            </a></li>
+
+            <li><a href="http://international.ucr.edu/HowToApply.aspx">
+                <img alt="" src="/Images/AdmissionsCheckboxThumbs/international-students.png" width="63"
+                height="52" />
+                <strong>International Students</strong> <span>See admissions requirements just<br /> for you.</span>
+            </a></li>
+
+             <li><a href="http://admissions.ucr.edu/Home/transfer">
+                <img alt="" src="/Images/AdmissionsCheckboxThumbs/transfer-students.png" width="63"
+                height="52" />
+                <strong>Transfer Students</strong> <span>Learn about transferring<br /> to UCR.</span>
+            </a></li>
+
+            <li><a href="http://instagram.com/lifeatucr">
+                <img alt="" src="/Images/AdmissionsCheckboxThumbs/instagram.png" width="63"
+                height="52" />
+                <strong>Follow us on Instagram</strong> <span>You'll love what you see.</span> </a>
+            </li>
+
+            <li><a href="http://www.facebook.com/ucradmissions">
+                <img alt="" src="/Images/AdmissionsCheckboxThumbs/N30_4F.png" width="63"
+                height="52" />
+                <strong>Like us on Facebook</strong> <span>Stay connected to UCR.</span></a></li>
+
+            <li><a href="http://twitter.com/UCRiverside">
+                <img alt="" src="/Images/AdmissionsCheckboxThumbs/N30_5T.png" width="63"
+                height="52" />
+                <strong>Follow us on Twitter</strong> <span>Don’t miss a single update.</span></a></li>
+
+            <li><a href="http://lifeatucr.tumblr.com/">
+                <img alt="" src="/Images/AdmissionsCheckboxThumbs/N30_6T.png" width="63"
+                height="52" />
+                <strong>Follow us on Tumblr</strong> <span>See what’s happening at UCR right now.</span></a>
+            </li>            
+        </ul>
+    </div>
+    <div class="bxsliderMarkerRight">
+        &nbsp;
+    </div>
+</div>
+
+<h2 class="intro">You’re Invited<br />
+</h2>
+<h3 class="verd intro">Visit our campus, schedule a tour, discover the fun of Southern
+    <br />
+    California and plan your perfect trip to UCR.
+</h3>
+
+
+<div id="featured">
+    <img alt="VisitUCRPhotoGallery" src="/Images/visitLandingSlider/Visit_slider1.jpg" />
+    <img alt="VisitUCRPhotoGallery" src="/Images/visitLandingSlider/Visit_slider2.jpg" />
+    <img alt="VisitUCRPhotoGallery" src="/Images/visitLandingSlider/Visit_slider3.jpg" />
+    <img alt="VisitUCRPhotoGallery" src="/Images/visitLandingSlider/Visit_slider4.jpg" />
+    <img alt="VisitUCRPhotoGallery" src="/Images/visitLandingSlider/Visit_slider5.jpg" />
+    <img alt="VisitUCRPhotoGallery" src="/Images/visitLandingSlider/Visit_slider6.jpg" />
+    <img alt="VisitUCRPhotoGallery" src="/Images/visitLandingSlider/Visit_slider7.jpg" />
+    <img alt="VisitUCRPhotoGallery" src="/Images/visitLandingSlider/Visit_slider8.jpg" />
+    <img alt="VisitUCRPhotoGallery" src="/Images/visitLandingSlider/Visit_slider9.jpg" />
+    <img alt="VisitUCRPhotoGallery" src="/Images/visitLandingSlider/Visit_slider10.jpg" />
+    <img alt="VisitUCRPhotoGallery" src="/Images/visitLandingSlider/Visit_slider11.jpg" />
+</div>
+
+<div class="clearfix" style="margin: 38px 0;">
+    <div class="grid_8 alpha">
+        <h3 class="stupid orange verd">We Admit It, We're Showoffs
+        </h3>
+        <p>
+            ...and we can't wait to show you everything UC Riverside has to offer.
+        </p>
+        <p>
+            Tour our beautiful campus with its park-like grounds and dynamic new facilities.
+            Hear about our rich history and award-winning faculty.
+        </p>
+        <p>
+            Come, take a walk with us, meet our diverse student family and learn all about UC
+            Riverside's promising future.
+        </p>
+        <h4 class="stupid orange verd">Get an Insider's Look at UC Riverside
+        </h4>
+        <p>
+            As a prospective or newly admitted student, you and your family will have the opportunity to talk with a 
+            current UCR undergraduate student who will serve as your guide. Come take a 50-minute tour of one of the 
+            most highly ranked universities in the country, right in the heart of exciting Southern California!
+        </p>
+        <h3>Event Calendar</h3>
+        <iframe src="http://www.google.com/calendar/embed?showTitle=0&amp;showTabs=0&amp;mode=AGENDA&amp;height=260&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=tour%40ucr.edu&amp;color=%232952A3&amp;ctz=America%2FLos_Angeles" style="border-width: 0" width="456" height="260" frameborder="0" scrolling="no" title="Google Calendar"></iframe>
+    </div>
+    <div class="grid_4 omega">
+        <div class="iconSections version2 sub4">
+            <h4>
+                <span>
+                    <img alt="" width="49" height="48" src="/Images/icons/walkerIcon.png" /></span>
+                <a href="http://student08.ucr.edu/em/visitUCR/default.aspx">Schedule a Tour</a>
+            </h4>
+            <p>
+                See the campus with a UCR student guide.
+            </p>
+            
+            <h4>
+                <span>
+                    <img alt="" width="47" height="47" src="/Images/icons/cameraIcon.png" />
+                </span>
+                <a href="http://visit.ucr.edu/virtualtours" >Take a Virtual Tour </a>
+            </h4>
+            <p>Get a 3-D glimpse of UCR.</p>
+            
+            <h4>
+                <span>
+                    <img alt="" width="47" height="47" src="/Images/icons/IntSpeaker_icon.jpg" />
+                </span>
+                <a href="http://student08.ucr.edu/em/visitUCR/default.aspx" >International Groups </a>
+            </h4>
+            <p>Welcome  to UCR! Schedule a tour now. </p>
+
+            <h4>
+                <span>
+                    <img alt="" width="47" height="47" src="/Images/icons/compassIcon.png" />
+                </span><a href="http://campusmap.ucr.edu/imap/index.html">View a Campus Map</a>
+            </h4>
+            <p>
+                Find buildings and parking. Print and go.
+            </p>
+            <h4>
+                <span style="margin-bottom: 35px;">
+                    <img alt="" width="47" height="47" src="/Images/icons/cancelIcon.png" />
+                </span><a href="http://student08.ucr.edu/em/visitUCR/cancel.aspx">Cancel a Tour</a>
+            </h4>
+            <p>
+                Plans change? Cancel or reschedule easily.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="clearfix">
+    <div class="grid_6 alpha">
+  <a href="http://www.youtube.com/embed/jDkA2RqvH8Q?autoplay=1&amp;wmode=transparent" class="youtube"><img alt="" width="334" height="135" src="/Images/visitHome/octocopter.png" style="margin-bottom: 15px;" /></a>
+        <h3>Soar Over UCR </h3>
+  <p>Fly through campus and get a sky-high view of UCR's buildings, courtyards, playing fields and more. </p>
+        <a href="http://www.youtube.com/embed/jDkA2RqvH8Q?autoplay=1&amp;wmode=transparent" class="rightArrowCTA youtube">Watch Now</a>
+    </div>
+    <div class="grid_6 omega">
+      <img alt="" width="334" height="135" src="/Images/campusTours.jpg" style="margin-bottom: 15px;" />
+        <h3>Directions/Parking</h3>
+        <p>
+            The Campus Tours Office is located on the first floor of the <a href="http://campusmap.ucr.edu/imap/index.html?loc=SSB">Student Services Building</a>. All-day parking
+            is available for $7 as assigned by kiosk attendant.
+        </p>
+        <a href="/VisitUCR/gettingHere" class="rightArrowCTA">Learn More</a>
+    </div>
+</div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="footerwrapper">
+        <div class="container_16">
+            <div class="prefooter alt-1-1-3 clearfix">
+                <div class="grid_5">
+                    <h3>
+                        General Campus Information</h3>
+                    <address>
+                        <span class="vcard"><strong><span class="fn org">University of California, Riverside</span></strong><br />
+                            <span class="adr"><span class="street-address">900 University Ave.</span><br />
+                                <span class="locality">Riverside</span>, <span class="region">CA</span> <span class="postal-code">
+                                    92521</span><br />
+                            </span>Tel: <span class="tel">(951) 827-1012</span> </span>
+                    </address>
+                    <ul class="footer_links">
+                        <li><a href="http://library.ucr.edu/">UCR Libraries</a></li>
+                        <li><a href="http://campusstatus.ucr.edu/">Campus Status</a></li>
+                        <li><a href="http://campusstore.ucr.edu/">Campus Store</a></li>
+                        <li><a href="http://www.ucr.edu/employment.html">Career Opportunities</a></li>
+                        <li><a href="http://diversity.ucr.edu/">Diversity</a></li>
+                        <li><a href="http://www.ucr.edu/about/directions.html">Maps and Directions</a></li>
+                        <li><a href="http://admissions.ucr.edu/VisitUCR">Visit UCR</a></li>
+                    </ul>
+                </div>
+                <div class="grid_5">
+                    <h3>
+                        Department Information</h3>
+                    <address>
+                        <strong>UCR Admissions</strong><br />
+                        <a href="http://campusmap.ucr.edu/campusMap.php?loc=SSB" title="Campus Map">3106 Student
+                            Services Building</a><br />
+                        <br />
+                        Tel: (951) 827-3411<br />
+                        Fax: (951) 827-6344<br />
+                        E-mail: <a href="mailto:admissions@ucr.edu?subject=Website%20Inquiry">admissions@ucr.edu</a></address>
+                    <ul class="footer_links">
+                        <li><a id="footer_link_facebook" class="footer_link_icon" href="https://www.facebook.com/ucradmissions?bcode=q099X"
+                            title="external site: Facebook">Visit UCR Admissions Facebook page</a></li>
+                        <li><a id="footer_link_twitter" class="footer_link_icon" href="http://twitter.com/ucradmissions"
+                            title="external site: Twitter">Follow UCR Admissions on Twitter</a></li>
+                        <li><a id="footer_link_tumblr" class="footer_link_icon" href="http://lifeatucr.tumblr.com">
+                            Read about UCR Student Life on Tumblr</a></li>
+                        <li><a id="footer_link_instagram" class="footer_link_icon" href="http://instagram.com/lifeatucr">Follow UCR Admissions on Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="grid_6">
+                    <h3>
+                        Related Links</h3>
+                    <ul class="relatedLinks">
+                        <li><a href="http://www.universityofcalifornia.edu/admissions/how-to-apply/apply-online/index.html">
+                            Apply to UC Riverside </a></li>
+                        <li><a href="http://vcsaweb.ucr.edu/MyUCR/CreateAccount.aspx">Create a MyUCR Account</a></li>
+                        <li><a href="http://international.ucr.edu">International Admissions</a></li>
+                        <li><a href="http://finaid.ucr.edu/Pages/default.aspx">Financial Aid </a></li>
+                        <li><a href="http://promise.ucr.edu/">Living the Promise </a></li>
+                        <li><a href="http://rside.ucr.edu/">R'Side </a></li>
+                        <li><a href="http://tartansoul.ucr.edu/">Tartan Soul</a></li>
+                        <li><a href="http://gohighlanders.com/splash.aspx?id=splash_226">Go Highlanders</a></li>
+                        <li><a href="http://rdream.ucr.edu">R'Dream</a></li>
+                    </ul>
+                    <p class="footer_info">
+                        <img src="/Images/footer.jpg" alt="" width="120" height="103" />
+                        <strong>UCR Undergraduate Admissions</strong> is committed to providing you with
+                        the highest level of service. We serve prospective students, their families, and
+                        educators, and enroll a highly diverse and academically accomplished student body.
+                    </p>
+                </div>
+            </div>
+            <div id="nav_footer" class="clearfix">
+                
+                <ul>
+                    <li><a id="nav_footer_home" href="http://www.ucr.edu/"><span>Home</span></a></li><li>
+                        <a id="nav_footer_about_ucr" href="http://www.ucr.edu/about/"><span>About UCR</span></a></li><li>
+                            <a id="nav_footer_academics" href="http://www.ucr.edu/academics/"><span>Academics</span></a></li><li>
+                                <a id="nav_footer_athletics" href="http://www.ucr.edu/athletics/"><span>Athletics</span></a></li><li>
+                                    <a id="nav_footer_happenings" href="http://www.ucr.edu/happenings/"><span>Happenings</span></a></li><li>
+                                        <a id="nav_footer_research" href="http://www.ucr.edu/research/"><span>Research</span></a></li><li>
+                                            <a id="nav_footer_resources" href="http://www.ucr.edu/resources/"><span>Campus Resources</span></a></li><li>
+                                                <a id="nav_footer_giving" href="http://www.ucr.edu/giving/"><span>Giving to UCR</span></a></li></ul>
+            </div>
+            
+            <div id="footer">
+                <ul>
+                         <li><a href="/#sliderTriggerAnchor" class="footerFeedbackLink" accesskey="9" title="Send Feedback E-mail">
+
+                        Feedback</a></li>
+                    <li><a href="http://www.ucr.edu/privacy.html">Privacy Policy</a></li>
+                    <li><a href="http://www.ucr.edu/terms.html" accesskey="8" title="Terms and Conditions">
+                        Terms and Conditions</a></li>
+                    <li>@ 2015 Regents of the University of California</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -72,7 +72,7 @@ public class ASESearcher {
 	      JSONObject currResult = new JSONObject();
 	      System.out.println(d.get("title"));
 	      currResult.put("title", d.get("title"));
-	      currResult.put("body", "here is some text that will go in place of the body");
+	      //currResult.put("body", "here is some text that will go in place of the body");
 	      //currResult.put("body", d.get("body"));
 	      resultsArr.put(currResult);
 	      //System.out.println((i + 1) + ". "+ "\t" + d.get("title"));

@@ -1,0 +1,110 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+	    <title>CAS &#8211; Central Authentication Service</title>
+        
+           
+           
+                
+                <link type="text/css" rel="stylesheet" href="css/cas-3.4.3.1.css" />
+           
+        
+        <script type="text/javascript" src="/cas/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/cas/js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/cas/js/cas.js"></script>
+	    <link rel="icon" href="/cas/favicon.ico" type="image/x-icon" />
+	</head>
+	<body id="cas" class="fl-theme-iphone">
+    <div class="flc-screenNavigator-view-container">
+        <div class="fl-screenNavigator-view">
+            <div id="content" class="fl-screenNavigator-scroll-container">
+
+
+
+        
+        <div id="header-image">
+            <img src="images/cas_header.png" alt="CAS">
+        </div>
+        <form id="fm1" class="fm-v clearfix" action="/cas/login?service=https%3A%2F%2Fucrcmsdev.ucr.edu%2Fservlet%2FOX%2Fcas%3Fskin%3Doucampus%26user%3Dehs%26site%3Demergency%26path%3D%252Findex.html" method="post">
+
+            <p>You may authenticate now in order to access protected services later. For security reasons, quit your browser when you are done accessing services that require authentication.</p>
+            <div class="box fl-panel" id="login">
+                <!-- Congratulations on bringing CAS online!  The default authentication handler authenticates where usernames equal passwords: go ahead, try it out.  -->
+                <table class="table_form">
+                    <tbody>
+                        <tr>
+                            <td><label class="fl-label" for="username">UCR NetID: </label> </td> 
+                            <td><input id="username" name="username" class="required" tabindex="1" type="text" value="" size="25" autocomplete="false"/></td>
+                            </tr>
+                            <tr>
+                                <td> <label for="password" class="fl-label">Password:</label> </td>
+                                <td><input id="password" name="password" class="required" tabindex="2" type="password" value="" size="25" autocomplete="off"/></td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="2"> 
+                                        <input class="checkbox" id="warn" name="warn" value="true" tabindex="3" accesskey="w" type="checkbox">
+                                        <span style="position:relative; top:-1px;">Warn me before logging me into other sites</span>
+                                    </td>
+
+                                    <tr>
+                                        <td colspan="2">
+
+                                            <input type="hidden" name="lt" value="LT-15969992-4EordpZWNSZYCmdawtboDoLajq9FWh" />
+                                            <input type="hidden" name="execution" value="e1s1" />
+                                            <input type="hidden" name="_eventId" value="submit" />
+
+                                            <input src="images/login.png" class="btn-submit" name="submit" accesskey="l" value="LOGIN" tabindex="4" type="image" alt="Login Now">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        
+                            <div id="security-text">
+                                <p>
+                                Make sure you know and trust any webpage or program that asks for your UCR 
+                                NetID & Password. For more information on Web security, trusted applications, 
+                                and future plans please visit <a target="_blank" href="http://cnc.ucr.edu/websecurity/"> http://cnc.ucr.edu/websecurity. </a>
+                                </p>
+                            </div>
+
+                            </form>
+
+                            <div id="footer-section">
+                                <p>
+                                &copy; 2011 Regents of the University of California - <a href="http://cnc.ucr.edu" target="_blank">Computing &amp; Communications</p>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+</div>
+</div>
+</div>
+    </body>
+</html>
+
+

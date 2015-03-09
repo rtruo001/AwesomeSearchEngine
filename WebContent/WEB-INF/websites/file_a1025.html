@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="apple-touch-icon" href="images/ucr-libraries.png"/>
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<title>UCR Lib</title>
+
+<link rel="stylesheet" type="text/css" href="style.css" /> 
+
+</head>
+
+<body onload="setTimeout(function() { window.scrollTo(0, 1) }, 100);" class="mainBody">
+
+<div id="header"><a href="index.php"><img src="images/ucrlibbanner.png" border="0" /></a></div>
+
+<!-- Start Content -->
+<div id="content">
+<h1 style="display: none;">UCR Mobile Library</h1>
+         
+
+<div class="content_header1">Reserves</div>
+
+<p>Find Items on Reserve by Instructor or Course.</p>
+
+<div class="centaurforms">
+<form method="get" action="http://scotty.ucr.edu/search/a?a" name="search" class="unpadded">
+        <ul class="centaurforms">
+            <li><label><strong>Instructor Name:</strong></span> </label>
+            <div><span>
+            <input name="searchtype" value="p" type="hidden" /> 
+            <input name="searcharg" type="text" id="searchreserveinstructor" class="fieldtextbox" />
+            <input name="SORT" value="D" type="hidden" /><br />
+            <em>Ex: Neiman, Neiman, M</em><br />
+            <input name="submit" value="Search" type="submit"  class="fieldsubmitbutton" id="submitbutton" />
+            </p> </form></span></div></li>
+            </ul>
+</form>            
+
+<form method="get" action="http://scotty.ucr.edu/search/a?a" name="search" class="unpadded">
+        <ul class="centaurforms">
+            <li><label><strong>Course Name:</strong></span> </label>
+            <div><span>
+            <input name="searchtype" value="r" type="hidden" /> 
+            <input name="searcharg" type="text" id="searchreserveclass" class="fieldtextbox" /> 
+            <input name="SORT" value="D" type="hidden" /><br />
+            <em>Ex: Biol 005A, Biology 005A, Engl, English</em><br />
+            <input name="submit" value="Search" type="submit"  class="fieldsubmitbutton" id="submitbutton" />
+            </p> </form></span></div></li>
+            </ul>
+</form>            
+</div>
+
+<br /><br /> </div>
+<!-- End Content -->
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20379995-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</body>
+</html>
+         
+<p class="footer">
+<a href="http://library.ucr.edu/redirect/?l=883">Comments</a> | <a href="http://library.ucr.edu/?nomobile=1">View Desktop Site</a> | <a href="http://www.ucr.edu">UCR</a><br>
+
+&copy;2011 Regents of the University of California
+</p>

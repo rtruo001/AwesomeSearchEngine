@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="apple-touch-icon" href="/m/images/ucr-libraries.png"/>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <title>UCRLibraries</title>
+    <link rel="stylesheet" type="text/css" href="/m/style.css" /> 
+
+    <meta name="viewport" content="user-scalable=no, width=device-width">
+    <link rel="stylesheet" type="text/css" href="http://www.worldcatmobile.org/css/iphone.css" />
+
+    <script type="text/JavaScript" src="http://www.worldcatmobile.org/js/jquery.js"></script>
+    <script type="text/JavaScript" src="http://www.worldcatmobile.org/js/jquery.cookie.js"></script> 
+    <script type="text/JavaScript" src="http://www.worldcatmobile.org/js/iphone.js"></script> 
+    <script type="text/JavaScript">
+            var bibformat = "bks";
+            var idx = "kw";
+            var q = "";
+            var qe = "";
+            var yr = "1";
+            var sort = "relevance";
+            var zip = "";
+            if ($.cookie('zip')) { 
+                zip = $.cookie('zip');
+            }
+            var zipform = "";
+            var descmax = "80";
+            var startRecord = "1";
+            var maximumRecords = 5;
+            var os = "";
+            var on = "";
+            var count = 0;
+            var relatedLabel = new Array();
+            relatedLabel['book'] = "Related books";
+            relatedLabel['subject'] = "Related subjects";
+            var scrollPos = 0;        
+            var site = "ucr";
+            var configInstSymbol = "CRU";
+            var instDisplayName = "UCR Libraries";
+            var scope = "on";
+            
+            // build an array to hold the search result, if any
+            r = new Array();
+
+            // get a formatted search result
+            function getResult() {
+                var res = "";
+                for (var i=1; i<r.length; i++) {
+                    res += "<div id=\"record\">";
+                    res += "<table id=\"recordtable\"><tr id=\"recordrow"+i+"\" valign=\"top\"><td class=\"recordtext\">";
+                    res += "<strong>"+r[i][2]+"</strong>";
+                    if (r[i][3].length > 0) {
+                        res += " by " + r[i][4];
+                    }
+                    if (r[i][7].length > 0) {                        
+                        res += " - Published "+r[i][7];
+                    }
+                    if (r[i][8].length > 3) {
+                        var desc = r[i][8];
+                        if (desc.length > descmax) {
+                            desc = desc.substring(0,descmax);
+                            desc += " ...";
+                            desc += " <a href=\"javascript:descextent('"+i+"','full')\" >[more]</a>";
+                        }
+                        res += "<div id=\"desc"+i+"\" class=\"description\">"+desc+"</div>";
+                    }
+                    var coverID = r[i][1];
+                    coverID = enCrypt(coverID);
+                    var searchOrder = "SY,BT,IN";
+                    searchOrder = enCrypt(searchOrder);
+                    var coverUrl = "http://coverart.oclc.org/ImageWebSvc/oclc/"+coverID+"_70.jpg?SearchOrder="+searchOrder;
+                    coverUrl += "&DefaultImage=N";
+                    res += "</td><td class=\"recordcover\"><a href=\"javascript:getLibrary('"+i+"')\" class=\"thumbnailLink\">";
+                    res += "<img id=\"thumbnail"+i+"\" src=\""+coverUrl+"\" alt=\"cover\" class=\"thumbnail\"/></a></td></tr>\n";
+                    res += "</table>\n";
+                    res += "<div id=\"email\" >";
+                    res += "<img src=\"images/email.png\" height=\"17\" width=\"16\" align=\"absmiddle\" border=\"0\"/> E-mail a ";
+                    res += "<a href=\"javascript:doMail('"+i+"')\">link</a>";
+                    res += " or ";
+                    res += "<a href=\"javascript:doCitations('"+i+"')\">citations</a>";
+                    res += "</div>";
+                    res += "<div class=\"related\">";
+                    if (instDisplayName.length > 0) {
+                        res += "<div id=\"avail"+i+"\" class=\"relateditem\" >";
+                        res += "<img src=\"images/spinner.gif\" height=\"16\" width=\"16\" alt=\"spinner\" align=\"absmiddle\" /> Checking availability at "+instDisplayName;
+                        res += "</div>";
+                    }    
+                    if (instDisplayName.length == 0 || scope.indexOf("on") == -1) {    
+                        res += "<div id=\"lib"+i+"\" class=\"relateditem\" >";
+                        res += "<a href=\"javascript:getLibrary('"+i+"')\"><img src=\"images/worldcat_symbol_16x16_grayedge.gif\" height=\"16\" width=\"16\" align=\"absmiddle\" border=\"0\" /></a> ";
+                        res += "<a href=\"javascript:getLibrary('"+i+"')\">";
+                        if (on.length > 0) {
+                            res += "Find at "+on;
+                        } else {
+                            res += "Find in ";
+                            if (instDisplayName.length > 0) {
+                                res += "another ";
+                            } else {
+                                res += "a ";
+                            }
+                            res += "library";
+                        }
+                        res += "</a>";
+                        res += "</div>";
+                    }
+                    //if (r[i][3].length > 0) {
+                        //res += "<div id=\"book"+i+"\" class=\"relateditem\" >";                        
+                        //res += relatedLink('book',i);
+                        //res += "</div>";
+                        //res += "<div id=\"subject"+i+"\" class=\"relateditem\" >";                        
+                        //res += relatedLink('subject',i);
+                        //res += "</div>";                        
+                    //}                        
+    
+                    res += "</div>";    
+                    res += "</div>";                    
+                }    // end for r.length
+                var nav = "";
+                if (count > 1) {
+                    nav += "<div class=\"resultsize\">";
+                    var startRecordInt = parseInt(startRecord);
+                    var pageEnd = startRecordInt + r.length - 2;
+                    nav += startRecord + " to " + pageEnd + " of " + addCommas(count);    
+                    if (count > 10) {
+                        nav += " | ";                            
+                        if (startRecordInt > 1) {
+                            var link = makeLink(qe,idx,bibformat,yr,sort,startRecordInt-maximumRecords,maximumRecords);
+                            nav += "<a href=\""+link+"\">< Previous</a>";
+                        } else {
+                            nav += "< Previous";
+                        }
+                        nav += " | ";
+                        if (startRecordInt < (count-maximumRecords)) {
+                            var link = makeLink(qe,idx,bibformat,yr,sort,startRecordInt+maximumRecords,maximumRecords);
+                            nav += "<a href=\""+link+"\">Next ></a>";
+                        } else {
+                            nav += "Next >";
+                        }    
+                    }
+                    if (scope.indexOf("on") != -1) {
+                        nav += "<br/>";
+                        nav += "Results for "+instDisplayName+". <a href=\"javascript:changeScope('off')\">Expand</a> search to all WorldCat libraries.";
+                    } else if (scope.indexOf("off") != -1 && instDisplayName.length > 0) {
+                        nav += "<br/>";
+                        nav += "Results for all WorldCat libraries. <a href=\"javascript:changeScope('on')\">Narrow</a> search to "+instDisplayName+".";
+                    }
+                    if (count > 10 && yr.indexOf("1") != -1) {
+                        nav += "<br/>";
+                        nav += "Show only titles published <a href=\"javascript:pubdateSearch('2')\">in the last 10 years</a>";
+                    }
+                    if (count > 10 && yr.indexOf("2") != -1) {
+                        nav += "<br/>";
+                        nav += "Include titles published <a href=\"javascript:pubdateSearch('1')\">before 2000</a>";
+                    }                    
+                    nav += "</div>";
+                } // count > 1
+                res = nav + res + nav;            
+                return res;
+            }    
+            
+        </script>      
+    </head>
+          
+    <body  onload="setTimeout(function() { window.scrollTo(0, 1) }, 100); get_availability();" style="margin: 0px; padding: 10px;">
+
+    <div id="header"><a href="index.php"><img src="/m/images/ucrlibbanner.png" border="0" /></a></div>
+
+<!-- Start Content -->
+<div id="content">
+<h1 style="display: none;">UCR Mobile Library Catalog</h1>
+
+    
+    <form id="searchform" name="searchform" method="get" action="http://ucr.worldcat.org/m/search" onSubmit="return checkZipForm()">
+            <input type="hidden" name="scope" value="1">
+            <input type="hidden" name="os" value="" />
+            <input type="hidden" name="on" value="" />
+            <input type="hidden" name="site" value="ucr.worldcat.org" />
+
+            <script type="text/javascript">
+<!--
+$("#mastheadbox").css("background-color","#333366");
+$("#mastheadbox").css("border-color","#333366");
+//-->
+</script>         
+                    
+
+<div id="searchbox"></div>
+<br />
+<p style="text-align:center">Search powered by <img src="images/worldcat_small.jpg" height="16" width="58" align="absmiddle"/></p>
+            
+<script type="text/javascript">
+    var sbs = 0;
+    // look for stored search box scope in a cookie
+    if ($.cookie('sbs')) { 
+        sbs = $.cookie('sbs');
+    }
+    showSearchBox(sbs);
+</script>                            
+        
+        </form>
+                        
+  </div>
+<!-- End Content -->
+
+
+<p class="footer">
+<a href="http://library.ucr.edu/redirect/?l=883">Comments</a> | <a href="http://library.ucr.edu/redirect/?l=898">View Full Site</a> | <a href="http://library.ucr.edu/redirect/?l=897">UCR Mobile</a><br />
+
+<span style="font-size: .85em;">University of California &copy; 2015 UC Regents</span>
+
+</p>                                                                                             
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20379995-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
+         
+  

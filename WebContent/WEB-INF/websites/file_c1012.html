@@ -1,0 +1,2005 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+
+
+ 
+
+
+
+    <meta charset="utf-8"/>
+    <meta content="initial-scale=1.0" name="viewport"/>
+    <meta content="7MiYjX2ZghMOWvtKRWlar--c6mD2ose5EcbQFQ6szFA" name="google-site-verification"/>
+    <title>Core Shared Facilities</title>
+    
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+    <meta content="University of California, San Diego" name="ORGANIZATION"/>
+    <meta content="index,follow,noarchive" name="robots"/>
+    <meta content="Blink" name="SITE"/>
+    <meta content="Core Shared Facilities" name="PAGETITLE"/>
+    <meta content="Find information on core research facilities at UC San Diego." name="DESCRIPTION"/>
+
+
+    
+ 
+
+
+
+<link rel="stylesheet" href="//blink.ucsd.edu/_resources/css/bootstrap.min.css" />
+<link rel="stylesheet" href="//blink.ucsd.edu/_resources/css/bootstrap-responsive.min.css" />
+
+<link rel="stylesheet" href="//ucsd.edu/common/cwp/3.2.0/base-min.css" />
+<link rel="stylesheet" href="//ucsd.edu/common/cwp/3.2.0/cms-min.css" />
+
+
+<!-- Site-specific CSS files -->
+        <link href="../../_resources/css/site-specific.css" media="all" rel="stylesheet" type="text/css"/>
+    
+<!--[if lt IE 9]>
+    <link rel="stylesheet" href="//blink.ucsd.edu/_resources/css/tdr_search2-ie.css">
+<![endif]-->
+
+
+<script src="//ucsd.edu/common/cwp/3.2.0/base-min.js"></script>
+<script src="//ucsd.edu/common/cwp/3.2.0/cms-min.js"></script>
+
+<script src="//blink.ucsd.edu/_resources/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+<!-- Site-specific javascript files -->
+        <script src="../../_resources/js/site-specific.js" type="text/javascript"></script>
+    
+
+<script type="text/javascript" src="//www.ucsd.edu/common/_emergency-broadcast/message.js"></script>
+
+ 
+</head>
+<body>
+<div id="uc-emergency"></div>
+<div id="tdr_login"><!-- Start page controls -->
+<span class="tdr_login_content"></span> <!-- End page controls -->
+</div>
+<div id="tdr_title">
+<div id="tdr_title_content">
+<a href="http://www.ucsd.edu" id="tdr_title_ucsd_title">UC San Diego</a>
+<div id="tdr_title_page_title">
+
+
+
+<a href="/">
+            Faculty &amp; Staff
+    </a>
+    </div>
+<a class="search-button" id="tdr_title_search_link">Search</a><a id="tdr_title_menu_link">Menu</a>
+</div>
+</div>
+
+<div id="tdr_search">
+<script src="https://www.google.com/jsapi" type="text/javascript">
+// <![CDATA[
+
+// ]]>
+</script>
+<script type="text/javascript">
+// <![CDATA[
+google.load('search', '1');
+google.setOnLoadCallback(function() {
+    if(document.getElementById('q') != null){        
+        google.search.CustomSearchControl.attachAutoCompletion(
+        '004685874581245502426:palsaetk1kk',
+        document.getElementById('q'),
+        'sitesearch');
+    }
+
+    if(document.getElementById('search-term') != null){        
+        google.search.CustomSearchControl.attachAutoCompletion(
+        '004685874581245502426:palsaetk1kk',
+        document.getElementById('search-term'),
+        'sitesearch-box');
+    }
+});
+// ]]>
+</script>
+<script src="https://www.google.com/cse/brand?form=%20sitesearch%20&amp;lang=en" type="text/javascript">
+// <![CDATA[
+
+// ]]>
+</script>
+<script src="https://www.google.com/cse/brand?form=%20sitesearch-box%20&amp;lang=en" type="text/javascript">
+// <![CDATA[
+
+// ]]>
+</script>
+<script type="text/javascript">
+// <![CDATA[
+var radioHandler = function() {
+                                if (this.checked == true) {
+                                        this.className = "active";
+                                        $("#" + this.id + "-label").each(function() {
+                                                this.className = "active";
+                                        });
+                                } else {
+                                        this.className = "inactive";
+                                        $("#" + this.id + "-label").each(function() {
+                                                this.className = "inactive";
+                                        });
+                                }
+        }
+       
+        $(document).ready(function() {
+                $("#tdr_search2_content input[type=radio]").click(function() {
+                        $("input[type=radio]", this.form).each(radioHandler);
+                });
+                $("#tdr_search2_content input[type=radio]").each(radioHandler);
+        });
+// ]]>
+</script><div class="container">
+<div id="tdr_search_content">
+<form action="http://act.ucsd.edu/blinksearch/search" id="sitesearch" method="get" style="float: left;">
+<fieldset><legend>Search</legend> <label>Search:</label> <span id="site-1"><input checked="checked" id="search-scope1" name="search-scope" style="border: 0px none; width: 10px;" type="radio" value="blink"/> <label for="search-scope1" id="search-scope1-label">This Site</label> &#160;</span> <span id="site-2"><input id="search-scope2" name="search-scope" style="border: 0px none; width: 10px;" type="radio" value="default_collection"/> <label for="search-scope2" id="search-scope2-label">All UCSD Sites</label> &#160;</span> <input id="q" name="q" size="20" type="text"/> <button alt="Submit button" type="submit">Search!</button></fieldset>
+</form>
+<form action="http://act.ucsd.edu/directory/search" id="peoplesearch" method="get" style="float: right;">
+<fieldset><legend>Find Faculty/Staff</legend> <label for="search-scope3">Find Faculty/Staff</label> <input name="jlinkevent" type="hidden" value="Redirect"/> <input name="entry" size="20" type="text"/> <button alt="Submit button" type="submit">Search!</button></fieldset>
+</form>
+</div>
+</div>
+<div id="tdr_search_content-2">
+<form action="http://act.ucsd.edu/cwp/tools/search-redir" id="sitesearch" method="get"><label for="search-scope">Search</label><select id="search-scope" name="search-scope">
+<option selected="selected" value="blink2">This Site</option>
+<option value="default_collection">All UCSD Sites</option>
+<option value="faculty-staff">Faculty/Staff</option>
+</select><label for="search-term" id="search-term-label">Search Term</label> <input class="search-term" id="search-term" name="search-term" size="20" type="search"/> <input name="client" type="hidden" value="google-csbe"/> <input alt="Submit button" class="search-button" type="submit" value="Search"/></form>
+</div>
+<!--/.container-->
+</div>
+
+<div class="tdr_fonts" id="tdr_content">
+<div id="tdr_content_content">
+<div class="navbar">
+<div class="navbar-inner">
+<div class="container"><button class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse" type="button">Menu</button> <span id="logo"><a class="brand" href="http://blink.ucsd.edu">Blink: Information for UC San Diego Faculty and Staff</a></span> 
+<div class="nav-collapse collapse pull-right">
+<ul class="nav">
+<li class="dropdown" id="blink"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Blink Topics</a> 
+<ul class="dropdown-menu">
+<li><a href="../../buy-pay/index.html">Buy &amp; Pay</a></li>
+<li><a href="../../facilities/index.html">Facilities &amp; Services</a></li>
+<li><a href="../../faculty/index.html">Faculty Resources</a></li>
+<li><a href="../../finance/index.html">Finance</a></li>
+<li><a href="../../HR/index.html">Human Resources</a></li>
+<li><a href="../index.html">Research</a></li>
+<li><a href="../../safety/index.html">Safety</a></li>
+<li><a href="../../instructors/index.html">Student / Class Info</a></li>
+<li><a href="../../technology/index.html">Technology</a></li>
+<li><a href="../../travel/index.html">Travel</a></li>
+</ul>
+</li>
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Personal Tools</a> 
+<ul class="dropdown-menu">
+<li><a href="https://atyourserviceonline.ucop.edu/ayso/">At Your Service via AYSO</a></li>
+<li><a href="http://ayso.ucsd.edu">At Your Service via SSO</a></li>
+<li><a href="http://ucnet.universityofcalifornia.edu/compensation-and-benefits/total-compensation-calculator.php">Compensation Calculator</a></li>
+<li><a href="http://edben.ucsd.edu">Educational Benefits</a></li>
+<li><a href="https://jobs.ucsd.edu/bulletin/default.aspx">Job Bulletin</a></li>
+<li><a href="https://act.ucsd.edu/mydirectory/updater">My Directory</a></li>
+<li><a href="http://myleavebalances.ucsd.edu">My LeaveBalances</a></li>
+<li><a href="http://mytime.ucsd.edu">My Time (Online)</a></li>
+<li><a href="https://act.ucsd.edu/employeeTimesheets/timesheets">My Time (Paper)</a></li>
+<li><a href="http://uclearning.ucsd.edu">My Training</a></li>
+<li><a href="http://mytravel.ucsd.edu">My Travel</a></li>
+<li><a href="http://skillportsso.ucsd.edu/">SkillSoft eLearning</a></li>
+<li><a href="http://uclearning.ucsd.edu">UC Learning Center</a></li>
+<li class="more"><a href="http://blink.ucsd.edu/_tool-page/index.html">All tools</a></li>
+</ul>
+</li>
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Business Tools</a> 
+<ul class="dropdown-menu">
+<li><a href="http://academicaffairs.ucsd.edu/aps/apol/">AP On-Line</a></li>
+<li><a href="https://bfsupport.ucsd.edu/">BFSupport</a></li>
+<li><a href="http://cams.ucsd.edu/">CAMS</a></li>
+<li><a href="http://booktravel.ucsd.edu/">Connexxus</a></li>
+<li><a href="https://ermsp.ucop.edu/ucsd/uctracker.html">Control Tracker</a></li>
+<li><a href="http://employeelink.ucsd.edu/">EmployeeLink</a></li>
+<li><a href="https://act.ucsd.edu/financial">FinancialLink</a></li>
+<li><a href="https://hireonline.ucsd.edu/">HireOnline</a></li>
+<li><a href="http://jdonline.ucsd.edu/">JDOnline</a></li>
+<li><a href="http://marketplace.ucsd.edu/">Marketplace</a></li>
+<li><a href="http://myapprovals.ucsd.edu">MyApprovals</a></li>
+<li><a href="http://myevents.ucsd.edu/">MyEvents</a></li>
+<li><a href="http://myfunds.ucsd.edu">MyFunds</a></li>
+<li><a href="http://mymobilebill.ucsd.edu">MyMobileBill</a></li>
+<li><a href="http://mytravel.ucsd.edu">MyTravel</a></li>
+<li><a href="https://act.ucsd.edu/studentdirectory/search">Student Directory</a></li>
+<li><a href="http://hr.ucsd.edu/tpp/">Title &amp; Pay Look-up</a></li>
+<li><a href="http://ucready.ucsd.edu/">UC Ready</a></li>
+<li><a href="http://blink.ucsd.edu/sponsor/blink/forms.html">Forms</a></li>
+<li class="more"><a href="http://blink.ucsd.edu/_tool-page/index.html">All tools</a></li>
+</ul>
+</li>
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Instruction Tools</a> 
+<ul class="dropdown-menu">
+<li><a href="http://www.assist.org/web-assist/welcome.html">ASSIST</a></li>
+<li><a href="https://act.ucsd.edu/cgi-bin/blink.pl/4/faculty/student/advanced_class_list.pl">Class lists</a></li>
+<li><a href="http://acms.ucsd.edu/faculty/classroom-support/classroom-details.html">Classroom details</a></li>
+<li><a href="https://act.ucsd.edu/studentDarsFacultyAudit/viewgroup.htm">View DARS audits</a></li>
+<li><a href="http://egrades.ucsd.edu/">eGrades</a></li>
+<li><a href="https://act.ucsd.edu/cgi-bin/blink.pl/4/faculty/resource/enroll_list.pl">Enrollment/waitlists</a></li>
+<li><a href="https://act.ucsd.edu/cgi-bin/blink.pl/5/faculty/student/student_name_lookup.pl">Find a student</a></li>
+<li><a href="http://ucsd.edu/catalog/">General Catalog</a></li>
+<li><a href="https://act.ucsd.edu/cgi-bin/blink.pl/4/faculty/student/major_list.pl">Majors list</a></li>
+<li><a href="https://act.ucsd.edu/cgi-bin/blink.pl/4/faculty/student/minor_list.pl">Minors list</a></li>
+<li><a href="https://act.ucsd.edu/cgi-bin/blink.pl/4/faculty/queries.html">Queries</a></li>
+<li><a href="https://act.ucsd.edu/studentRegistration/status?registrationEvent=checkStatus">Registration status</a></li>
+<li><a href="https://act.ucsd.edu/cgi-bin/blink.pl/1/faculty/schedule_of_classes.pl">Schedule of Classes</a></li>
+<li><a href="http://ted.ucsd.edu/">Ted</a></li>
+<li><a href="https://act.ucsd.edu/cgi-bin/blink.pl/4/faculty/student/audit/">Term audit</a></li>
+<li class="more"><a href="http://blink.ucsd.edu/_tool-page/index.html">All tools</a></li>
+</ul>
+</li>
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Research Tools</a> 
+<ul class="dropdown-menu">
+<li><a href="http://emta.ucsd.edu/">eMTA</a></li>
+<li><a href="https://act.ucsd.edu/GoogleResearchDirectory/research">Faculty Expertise</a></li>
+<li><a href="https://act.ucsd.edu/proposallog/proposallog">Get Proposal #</a></li>
+<li><a href="http://myeffort.ucsd.edu">MyEffort</a></li>
+<li><a href="http://ehs.ucsd.edu/myresearchsafety/">My Research Safety</a></li>
+<li><a href="https://act.ucsd.edu/sepr/eprs">Proposal Repository</a></li>
+<li><a href="http://rapids.ucsd.edu/">RAPIDS</a></li>
+<li><a href="http://ora.ucsd.edu/sharedfacilities/">Shared Facilities</a></li>
+<li><a href="http://blink.ucsd.edu/_tool-page/index.html">All tools</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<!--/.nav-collapse --></div>
+</div>
+</div>
+<div id="tdr_crumbs">
+<div id="tdr_crumbs_content"><ul id="tdr_crumbs_list"><li><a href="../../index.html">HOME</a>&#160;</li><li/><li><a href="../index.html">Research</a>&#160;</li><li/><li><a href="index.html">Conducting Research</a>&#160;</li><li>Core Shared Facilities</li></ul></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- display the main content -->
+<div id="tdr_2_col_content">                
+    <h1>Core Shared Facilities</h1> 
+   
+      
+      
+  
+<div class="article_info">
+<div class="article_updated_at">Last Updated: December 17, 2014 9:41:19 AM PST</div>
+<div class="article_feedback">Give <a href="http://www-act.ucsd.edu/cwp/feedback/tool/blink" onclick="window.open('http://www-act.ucsd.edu/cwp/feedback/tool/blink','DYGWYW','menubar=0,resizable=1,scrollbars=1,width=450,height=640')" target="DYGWYW">feedback</a></div>
+</div>
+    
+
+
+
+            
+        
+             
+            
+                                    
+            
+                                <p class="subhead">Find information on core shared research facilities at UC San Diego.</p>                
+            
+
+            
+                <div class="body-text"><p>The Office of Research Affairs maintains a listing of current research core facilities that are accessible to UCSD faculty, fellows, staff and students. Most of these core facilities are set up as recharge cores and many are equipped to accept outside business.</p></div>
+            
+
+
+
+<div class="accordion">
+<p><a class="expand_accordion" href="#">Expand all</a></p>
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">ACP Animal Phenotyping Core</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website</strong>:&#160;<a href="https://animalcare.ucsd.edu/pages/research-services/services-phenotyping-core.html">https://animalcare.ucsd.edu/pages/research-services/services-phenotyping-core.html</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:pjrichter@ucsd.edu">Phil Richter</a>, Campus Veterinarian</p>
+<p><strong>Alt. Contact</strong>:&#160;<a href="mailto:mstreets@ucsd.edu">Margo Streets</a>, Staff Res Assoc, (858) 822 3810</p>
+<p><strong>Department:</strong>&#160;Animal Care Program</p>
+<p><strong>Description:</strong>&#160;The UCSD Phenotyping Core provides behavioral and metabolic testing to assist researchers reach their goals. We provide testing, training, and rental of equipment for many testing paradigms on a recharge basis. All tests must be in an approved protocol prior to scheduling. All scheduling requests must be made a minimum of two business days in advance. All animals used in testing must be permanently and individually identifiable (via ear punch, ear tag, tattoo, etc.) and documented on cage card.</p>
+<p>Services include:</p>
+<div>
+<ul>
+<li><strong>General Screen</strong>:<br/>
+<ul>
+<li>Neurological Screen test</li>
+</ul>
+</li>
+<li><strong>Anxiety</strong>:<br/>
+<ul>
+<li>Elevated Plus Maze</li>
+<li>Open Field</li>
+<li>Zero Maze</li>
+</ul>
+</li>
+<li><strong>Blood Pressure</strong>:<br/>
+<ul>
+<li>Non-invasive Blood Pressure (Columbus Instruments)</li>
+</ul>
+</li>
+<li><strong>Imaging</strong>:<br/>
+<ul>
+<li>DEXAscan: Body composition via measurement of bone mineral density and % fat</li>
+<li>Xenogen IVIS</li>
+</ul>
+</li>
+<li><strong>Learning and Memory</strong>:<br/>
+<ul>
+<li>Active Avoidance (San Diego Instruments)</li>
+<li>Barnes Maze (San Diego Instruments): spatial learning and memory</li>
+<li>Conditioned Place Preference (San Diego Instruments)</li>
+<li>Fear Conditioning (Med-Associates)</li>
+<li>Hole Poke (Accuscan): spatial memory</li>
+<li>Morris Water Maze (ANY-maze; San Diego Instruments): spatial learning</li>
+<li>Passive Avoidance (San Diego Instruments)</li>
+<li>Radial Arm Maze (San Diego Instruments): spatial learning</li>
+</ul>
+</li>
+<li><strong>Metabolism</strong>:<br/>
+<ul>
+<li>Metabolic cages: basic (food/water uptake, urine output; non-automated)</li>
+<li>CLAMS (oxygen intake, carbon dioxide output, calorimetric assessment) (Columbus Instruments)</li>
+<li>CLAMS (environmental control of temperature and lighting, oxygen intake, carbon dioxide output, calorimetric assessment, activity, drinking, feeding, food access control) (Columbus Instruments)</li>
+</ul>
+</li>
+<li><strong>Motor Coordination/Strength and Locomotion</strong>:<br/>
+<ul>
+<li>Balance Beam: motor coordination and balance</li>
+<li>Cage Top: balance and grip strength</li>
+<li>Foot Misplacement (Columbus Instruments)</li>
+<li>Grip Strength (UGO Basile): forelimb grip strength</li>
+<li>Open Field (Accuscan): exploratory locomotor activity</li>
+<li>Rotarod (UGO Basile): motor function and coordination</li>
+<li>Treadmill (Columbus Instruments): motor coordination</li>
+<li>TreadScan (Clever Systems): forced walking gait analysis</li>
+<li>Wire Hang: forelimb grip strength</li>
+</ul>
+</li>
+<li><strong>Nociception</strong>:<br/>
+<ul>
+<li>Hot Plate (Columbus Instruments): pain reflexes and/or analgesia</li>
+<li>Tail Flick (Columbus Instruments): pain reflexes and/or analgesia</li>
+</ul>
+</li>
+<li><strong>Social Dominance</strong>:<br/>
+<ul>
+<li>Tube Test: social dominance and aggressive tendencies</li>
+</ul>
+</li>
+<li><strong>Startle Response/PPI</strong>:<br/>
+<ul>
+<li>Startle Response (SR-Lab; San Diego Instruments): hearing ability</li>
+<li>Pre-pulse Inhibition (SR-Lab; San Diego Instruments): schizophrenia-like behaviors and sensory inhibition</li>
+</ul>
+</li>
+</ul>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+</div>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">ACP Caesarian Rederivation Services</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="https://animalcare.ucsd.edu/pages/research-services/services-c-rederivation.html">https://animalcare.ucsd.edu/pages/research-services/services-c-rederivation.html</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:pjrichter@ucsd.edu">Phil Richter</a>, Director ACP, Campus Veterinarian</p>
+<p><strong>Alt. Contact</strong>:&#160;<a href="mailto:ssoendberg@ucsd.edu">Stella Soendberg</a>, Staff Res Assoc, (858) 822 2184</p>
+<p><strong>Department:</strong>&#160;Animal Care Program</p>
+<p><strong>Description:</strong>&#160;The most common cause of contamination in mouse colonies is the introduction of animals from non-standard vendors, such as academic institutions, which carry infectious microorganisms.&#160; Organisms introduced by these rodents would have a devastating impact on our existing mouse colonies if not properly managed. Consequently, current health reports from all non-standard sources are reviewed by the ACP veterinarian, and any pathogens noted are handled according to established procedures. Mice that have been exposed to (or potentially exposed to) pathogens can only be received under strict conditions and must be rederived prior to introduction to our existing mouse colonies. Mice may be rederived by one of two methods: Cesarean rederivation or embryo rederivation.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">ACP Diagnostic Laboratory Services</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="https://animalcare.ucsd.edu/pages/research-services/services-diagnostic-lab.html">https://animalcare.ucsd.edu/pages/research-services/services-diagnostic-lab.html</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:kgosborn@ucsd.edu">Kent Osborn</a>, Veterinary Pathologist</p>
+<p><strong>Alt. Contact</strong>:&#160;<a href="mailto:cyost@ucsd.edu">Cheryl Yost</a>,&#160;<a href="mailto:nrgardner@ucsd.edu">Nicole Gardner</a>, Staff Res Assocs, (858) 534 4264</p>
+<p><strong>Department:</strong>&#160;Animal Care Program</p>
+<p><strong>Description:</strong>&#160;The Animal Care Program Diagnostic Services Laboratory provides a broad spectrum of clinical pathology and morphologic pathology services for research support (e.g., safety/toxicology testing, individual animal model-related tests,p henotype analysis), as well as colony and individual animal health diagnostics and care. Prices for these services are determined on a cost recovery basis. The diagnostic laboratory is overseen by a veterinary pathologist, and staffed by experienced laboratory technicians. The large range of procedures and tests conducted in-house by the laboratory is complemented and expanded by use of established outside reference laboratories when necessary, as coordinated by the laboratory.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">ACP Irradiation Services</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="https://animalcare.ucsd.edu/pages/research-services/services-irradiation.html">https://animalcare.ucsd.edu/pages/research-services/services-irradiation.html</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:pjrichter@ucsd.edu">Phil Richter</a>, Director ACP, Campus Veterinarian</p>
+<p><strong>Alt. Contact</strong>:&#160;<a href="mailto:mmhardee@ucsd.edu">Marilyn Hardee</a>, Staff Res Assoc, (858) 534 4260</p>
+<p><strong>Department:</strong>&#160;Animal Care Program</p>
+<p><strong>Description:</strong>&#160;The ACP currently manages and/or assists with the operation of 3 irradiators at the following campus locations: MTF&#160;- currently the only machine that can accommodate requests from non-MTF users as well as from outside sources (non-UCSD departments). Because the machine resides outside of the animal facility at MTF, you must get an&#160;approved&#160;animal transfer request prior to scheduling an appointment for irradiation at MTF. Hours: Tuesday, Wednesday, and Thursday 1:00pm - 3:00pm. LBR&#160;- currently limited to users that have assigned animal space within that vivarium. Hours: Monday - Friday 8:30am - 11:30am. MCCT&#160;- currently limited to users that have assigned animal space within that vivarium. Hours: schedule directly through Joe Aguilera. All requested time frames must be within designated operating hours as stated above, with a minimum time frame of 15 minutes. Appointment requests outside of these time frames must be specified in the comments section of the online request, and will be approved on a case by case basis.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">ACP Operating Room and Equipment Rental</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="https://animalcare.ucsd.edu/pages/research-services/services-operating-room-rental.html">https://animalcare.ucsd.edu/pages/research-services/services-operating-room-rental.html</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:pjrichter@ucsd.edu">Phil Richter</a>, Director ACP, Campus Veterinarian</p>
+<p><strong>Alt. Contact</strong>:&#160;<a href="mailto:lteare@ucsd.edu">Lori Teare</a><a href="mailto:mmhardee@ucsd.edu"></a>, Animal Hlth Tech, (858) 822 5893</p>
+<p><strong>Department:</strong>&#160;Animal Care Program</p>
+<p><strong>Description:</strong>&#160;ACP currently has five animal surigical operating rooms that may be rented by the day. Operating Room Locations: BSB B104, BSB B269, CTF A050, URC 183, and EFS. Conditions for use: space availability - room is not available for "set-up" until the morning of scheduled rental, user must agree to leave space in clean condition after use, all trash placed in appropriate containers, all surfaces wiped clean and free from blood and animal fur, all used sharps placed in appropriate containers, all laboratory owned equipment removed from room. ACP also has anesthesia and surgical support equipment for rent. Prior to renting equipment you must have a rental agreement on file with the ACP, then equipment may be reserved via the ACP&#160;<a href="https://acpapps01.ucsd.edu/ror_main/resource_scheduler">Resource Scheduler.</a>&#160; A separate agreement must be on file specific to the type of equipment you are requesting.&#160; Agreement forms may be printed from the ACP website.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">ACP Veterinary Technical Services</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="https://animalcare.ucsd.edu/pages/research-services/veterinary-technical.html">https://animalcare.ucsd.edu/pages/research-services/veterinary-technical.html</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:pjrichter@ucsd.edu">Phil Richter</a>, Director ACP, Campus Veterinarian</p>
+<p><strong>Alt. Contact</strong>:&#160;<a href="mailto:mmhardee@ucsd.edu">Marilyn Hardee</a>, Staff Res Assoc, (858) 534 4260, for imaging services contact&#160;<a href="mailto:mbokar@ucsd.edu">Megan Bokar</a>, Animal Hlth Tech, (858) 246 0841</p>
+<p><strong>Department:</strong>&#160;Animal Care Program</p>
+<p><strong>Description:</strong>&#160;The Animal Care Program has a qualified staff available that can provide a variety of technical services to your lab on a recharge basis.&#160; Services that can be provided include but are not limited to all types of injection (IP, IM, IV, SC), blood and tissue collection, gavage, x-ray, surgical procedures, anesthesia, surgical nursing, post-op care, etc.&#160; The ability for ACP staff to provide a particular service is based on many factors. So that we are better able to serve you; when contacting&#160; the ACP to inquire or to place a request for technical services please be ready to include as much detail regarding your request as possible (i.e., protocol number, time lines/constraints, species, numbers of animals, procedures requested, supplies needed, etc.).&#160; The ACP has Animal Health Technicians available to assist laboratory staff with hands on training for minor technical procedures such as handling and restraint, blood and tissue collection, etc.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Biochemical Genetics and Metabolomics Lab</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://biochemgen.ucsd.edu/">http://biochemgen.ucsd.edu/</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:bbarshop@ucsd.edu">Bruce Barshop</a>, Prof Clin Peds</p>
+<p><strong>Department:</strong>&#160;Pediatrics</p>
+<strong>Description:</strong>&#160;Performs metabolic screening, organic acid, amino acid, and acylcarnitine analysis for researchers and patients in UCSD and non-UCSD medical institutions. Metabolomic determinations including those classes of compounds and purines and pyrimidines short chain fatty acids, and some carbohydrates. Specialized testing for intracellular cystine determination, including diagnosis of cystinosis by leukocytes and fibroblasts, Cystagon monitoring. Enzyme assays of HPRT and APRT in RBC and fibroblasts, and methylcrotonyl-CoA carboxylase, pyruvate carboxylase and propionyl-CoA carboxylase in leukocytes and fibroblasts. Core equipment includes Liquid Chromatography-Tandem Mass Spec (triple quadrupole [AB Sciex API-5500, 4000, 2000] and Q-TOF [AB-5600]), Amino Acid Analyzer (Biochrom 50), HPLC- UV-Vis (Agilent 1050, 1100), and Gas Chromatography-Mass Spectrometry (Agilent 5971, 5973).<br/>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Bioengineering/Orthopaedic Sugery MicroComputed Tomography Facility</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <p><strong>Faculty Director:</strong>&#160;<a href="mailto:rsah@ucsd.edu">Robert Sah</a>, Professor</p>
+<p><strong>Alternate Contact:</strong>&#160;<a href="mailto:esthercory@ucsd.edu">Esther Cory</a>, Staff Research Associate</p>
+<p><strong>Department:</strong>&#160;Bioengineering, Orthopaedic Surgery , Institute of Engineering in Medicine - Center for Musculoskeletal Research</p>
+<p><strong>Description:</strong>&#160;Core equipment includes Skyscan 1076 MicroComputed Tomography scanner for in vitro samples, at 9, 18, and 35um voxel size. Basic scanning includes scan time, axial views, and data. Additional options include advanced image processing for 2-D and 3-D visualization, morphometry, mineral density, fixed charge density.</p>
+<p><strong>Active Recharge:</strong>&#160;No</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Bioengineering Confocal Microscope Facility</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Faculty Director:</strong>&#160;<a href="mailto:shuchien@ucsd.edu">Shu Chien</a>, Professor 
+<p><strong>Alt. Contact:</strong>&#160;<a href="mailto:gnorwich@ucsd.edu">Gerard Norwich</a>, Staff Res Assoc&#160;</p>
+<p><strong>Department:</strong>&#160;Bioengineering, Institute of Engineering in Medicine</p>
+<p><strong>Description:</strong>&#160;Core equipment includes Olympus IX81 FV1000 spectral confocal, SIM scanner, and Tokai Hit environmental control stage incubator (in-vitro samples). &#160;&#160;Software options include Diffusion measurement and Multi-point stimulation.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Bioengineering Flow Cytometry Core</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <p><strong>Faculty Director:</strong>&#160;<a href="mailto:shuchien@ucsd.edu">Shu Chien</a>, Professor</p>
+<p><strong>Alt. Contact:</strong>&#160;<a href="mailto:gnorwich@ucsd.edu">Gerard Norwich</a>, Staff Res Assoc&#160;</p>
+<p><strong>Department:</strong>&#160;Bioengineering, Institute of Engineering in Medicine</p>
+<p><strong>Description:</strong>&#160;Core equipment includes a Becton Dickinson FACScan Flow Cytmeter.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Biomolecular and Proteomic Mass Spectrometry Facility</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://massspec.ucsd.edu/bioms/">http://massspec.ucsd.edu/bioms/</a> 
+<p><strong>Facility Director:</strong>&#160;<a href="mailto:mghassem@ucsd.edu">Majid Ghassemian,</a>&#160;Project Scientist</p>
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:ekomives@ucsd.edu">Elizabeth Komives</a>, Professor</p>
+<p><strong>Department:</strong>&#160;Chemistry &amp; Biochemistry, also supported by CTRI, Superfund, and SOM</p>
+<p><strong>Description:</strong>&#160;Core services include protein identification from gels or complex mixtures, MUDPIT and other multidimensional separations, protein quantitation by SILAC and iTRAQ identification of post-translational modification including phosphorylation, MALDI imaging instrumentation (user trained and operated) and walk-up MALDI-TOF for trained users to analyze biomolecular samples. Core equipment includes ABSciex 5600 triple-TOF, QSTAR Elite hybrid Q-TOF (AB Sciex), TEMPO LC MALDI plate spotter (AB Sciex), and 4800 MALDI-TOFTOF (AB Sciex), Akta Explorer for off-line multidimentional chromatography, and Voyager DE-STR MALDI-TOF (AB Sciex).</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Biomolecule Crystallography</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <p><strong>Website:</strong>&#160;<a href="http://crystallography.ucsd.edu/">http://crystallography.ucsd.edu/</a></p>
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:tch@ucsd.edu">Thomas Hermann</a>, Assoc Prof&#160;</p>
+<p><strong>Department:</strong>&#160;Chemistry &amp; Biochemistry</p>
+<p><strong>Description:</strong>&#160;Provides collection of X-ray diffraction data for large molecules (proteins, nucleic acids). Equipment includes Rigaku rotating anode X-ray generator, 2 confocal mirrors, 2 MAR area detectors.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Biostatistics and Bioinformatics Lab</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://biostat.ucsd.edu/">http://biostat.ucsd.edu</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:ccberry@ucsd.edu">Charles Berry</a>, Professor</p>
+<p><strong>Department:</strong>&#160;Family &amp; Preventative Medicine</p>
+<p><strong>Description:</strong>&#160;Provides Biostatistics and Bioinformatics consulting and Biomedical Informatics services.</p>
+<p><strong>Active Recharge:</strong>&#160;No</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Campus Research Machine Shop</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://blink.ucsd.edu/sponsor/CRMS/">http://blink.ucsd.edu/sponsor/CRMS/</a> 
+<p><strong>Facility Director:</strong>&#160;<a href="mailto:dljohnson@ucsd.edu">Don Johnson</a>, Senior Superintendent</p>
+<p><strong>Department:</strong>&#160;Resource Management and Planning</p>
+<p><strong>Description:</strong>&#160;CRMS performs CNC machining and design consultation to meet customers'' specialized needs. CAD/CAM technology enables us to machine complex parts to high tolerances at competitive rates. We also maintain a fully stocked material inventory for purchase, including steel, stainless steel, aluminum, brass, copper and plastics in a variety of forms and sizes. We also stock a large selection of metal working tools, o-rings, tube fittings and fasteners. Services include: Machining, Welding, Grinding, Turning, Milling, Wire and sinker EDM, Sheet metal fabrication, Vacuum leak testing, Heat treating, Gas brazing, Electro polishing, Fork Lift service for heavy equipment relocation.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Cancer and Minorities Research Resources</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <p><strong>Faculty Director:</strong>&#160;<a href="mailto:anavarro@ucsd.edu">Ana Navarro</a>, Assoc Prof</p>
+<p><strong>Department:</strong>&#160;Family and Preventative Medicine</p>
+<p><strong>Description:</strong>&#160;This shared resource is part of the Cooperative planning of the SDSU/UCSD Cancer Center Partnership grant. It is available to all SDSU and Cancer Center faculty and investigators conducting research related to cancer and under-represented ethnic groups.</p>
+<p><strong>Active Recharge:</strong>&#160;No</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Cardiovascular Physiology Lab</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <p><strong>Faculty Director:</strong>&#160;<a href="mailto:jomens@ucsd.edu">Jeffrey Omens</a>, Professor</p>
+<p><strong>Department:</strong>&#160;Medicine</p>
+<p><strong>Description:</strong>&#160;Large animal (dog and pig) research facility with bi-plane x-ray imaging instrumentation, and cardiovascluar physiology measurement systems for blood pressure, vascular flow, ECG, etc. Core equipment includes GE bi-plane x-ray system and Gould amplifier system.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">CASS Research and Engineering Services and Test Facilities</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://casswww.ucsd.edu/index.php/resources:Main">http://casswww.ucsd.edu/index.php/resources:Main</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:estephan@ucsd.edu">Edwin Stephan</a>,&#160;Pr Dev Engr&#160;</p>
+<p><strong>Department:</strong>&#160;Center for Astrophysics &amp; Space Sciences</p>
+<p><strong>Description:</strong>&#160;CASS Research and Engineering Services and Test Facilities:&#160;The CASS thermal/vacuum facility is a vacuum chamber (4 ft diameter x 7 ft long) with porting for cold gas/LN2 interface to custom thermal shrouds with heaters for thermal control in the -150C to +50C range. Vacuum pressures of 10-6 Torr are achievable through the diffusion pump and cold trap. Automated control of the thermal system and cold trap nitrogen supply allows users to operate the system around the clock for cost effective thermal/vacuum environmental testing of space instrumentation. CASS engineers and programmers have decades of experience in instrument and system design for radiation detection and space applications. They have developed lung function instrumentation for the astronauts on the Space Shuttle, high resolution electron detectors for electron microscopy at the National Center for Microscopy and Imaging Research, as well as packaging phototubes for use in hostile environments deep undersea or in outer space.</p>
+<p><strong>Active Recharge:</strong>&#160;No</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Cell Engineering Research Center</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://be.ucsd.edu/cerc_overview">http://be.ucsd.edu/cerc_overview</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:jtwatson@ucsd.edu">John Watson</a>, Professor&#160;</p>
+<p>Alt. Contact:&#160;<a href="mailto:cstubban@ucsd.edu">Chris Stubban</a>, Staff Research Associate, (858) 822-3421</p>
+<p><strong>Department:</strong>&#160;Bioengineering</p>
+<p><strong>Description:</strong>&#160;The Cell Engineering Research Center (CERC) is a user-based recharge facility focused on in-vitro mammalian and stem cell research available to all UCSD and non-UCSD researchers. Additional information about the CERC facility, including our competitive recharge rates and registration, can be found at our website. The CERC facility is comprised of the following 4 specialized laboratories:1) Biomaterials Synthesis, 2) Biomaterials Characterization, 3) Tissue Engineering Research, and 4) Bioreactor Design and Fabrication. The Core is equipped with a number of specialized instruments, including: a Cyntellect LEAP Laser-Enabled Analysis and Processing system, a TA Instruments AR-G2 rheometer, a Becton Dickinson FACScan flow cytometer, an ABI 7900HT Real Time PCR system, and a Malvern Instruments Gel Permeation Chromatography (GPC) system. General support equipment includes: Chemical fume hoods (available for long-term scheduling), Biological safety cabinets &amp; cell culture incubator stacks, Cold storage, including: &#160;refrigerators and -20&#176;C &amp; -80&#176;C freezers, Liquid-nitrogen cell storage, Inverted microscopes for routine &amp; epi-fluorescent observation; image recording, Water purification systems, Autoclave &amp; Ice machine. The CERC facility offers a secure working environment with key-card controlled access and video surveillance.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Center for Functional MRI</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://fmri.ucsd.edu/">http://fmri.ucsd.edu/</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:ttliu@ucsd.edu">Thomas Tao-Ming Liu</a>, Assoc Prof</p>
+<p><strong>Alt. contact:&#160;</strong><a href="mailto:momalley@ucsd.edu">Mary O'Malley</a>, (858) 822 0513</p>
+<p><strong>Department:</strong>&#160;Radiology</p>
+<p><strong>Description:</strong>&#160;The Center currently has two state-of-the-art General Electric (GE) Discovery MR750 3T whole-body imaging systems for studies in humans and a Bruker 7T MRI system for animal studies. &#160;Access to these scanners is available on a recharge basis. &#160;The scanners are available for research scanning 24 hours a day / 7 days a week. Research scan time is scheduled through an online Webschedule system.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">CFAR Bioinformatics and Information Technologies (BIT) Core</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://cfar.ucsd.edu/core-facilities/bit">http://cfar.ucsd.edu/core-facilities/bit</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:spond@ucsd.edu?subject=CFAR%20BIT%20Core">Sergei L. Kosakovsky Pond</a>, Associate Professor</p>
+<p><strong>Alt. contact:</strong>&#160;<a href="mailto:jay007@ucsd.edu?subject=CFAR%20BIT%20Core">Jason A. Young</a><strong>, Assistant Professor</strong></p>
+<p><strong>Department:</strong>&#160;Center for AIDS Research</p>
+<p><strong>Description:</strong>&#160;The Bioinformatics and Information Technologies (BIT) Core develops and provides a variety of computational and analytical services for local, national, and international researchers. Our team&#8217;s wide range of expertise in the latest open source software tools, bioinformatics methods, mobile technologies, and biomedical data management systems enables us to fulfill your computational needs, so that you can focus on doing your best and most cutting-edge research. Some of our most frequently used services include clinical research data management, mobile data collection, biomedical website design and hosting, phylogenetic and molecular evolution analysis, and NextGen sequence analysis. We also offer access to our private and secure 700+ processor compute cluster on a per project basis. Please visit us online today and see what we&#8217;ve done and how we may help you!</p>
+<p><strong>Active Recharge:</strong>&#160;No</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">CFAR Clinical Investigation and Biostatistics (CB) Core</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://cfar.ucsd.edu/core-facilities/clinical-investigation">http://cfar.ucsd.edu/core-facilities/clinical-investigation</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:cmathews@ucsd.edu?subject=CFAR%20CB%20Core">Christopher Mathews</a>,&#160;<a href="mailto:rhaubrich@ucsd.edu?subject=CFAR%20CB%20Core">Richard Haubrich</a>, and&#160;<a href="mailto:sojain@ucsd.edu?subject=CFAR%20CB%20Core">Sonia Jain</a></p>
+<p><strong>Alt. contact:</strong>&#160;<a href="mailto:http://cfar.ucsd.edu/core-facilities/bit?subject=CFAR%20CB%20Core">Eric Ellorin</a></p>
+<p><strong>Department:</strong>&#160;Center for AIDS Research</p>
+<p><strong>Description:</strong>&#160;The Clinical Investigation and Biostatistics Core provides services and expertise to help investigators, especially those new to HIV research, to conduct clinical studies as well as to access longitudinal databases for epidemiologic and outcomes research. The Clinical Investigation and Biostatistics Core provides the expertise and resources necessary for basic, clinical, health services, and epidemiologic researchers to efficiently and safely conduct clinical research to increase our understanding and treatment of HIV disease.&#160; The Core also has access to longitudinal databases maintained by UC San Diego's Owen Clinic and the CFAR Network of Integrated Clinical Systems (CNICS).</p>
+<p>The CB Core can assist you with design of data collection instruments; clinical trial design, randomization schemas, and training of clinical personnel; and statistical consultations, including sample size estimates, analysis plans, and statistical analyses.</p>
+<p>Contact us today to make your clinical research work for you!</p>
+<p><strong>Active Recharge:</strong>&#160;No</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">CFAR Flow Cytometry Research Core Facility at VA/VMRF</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://cfar.ucsd.edu/core-facilities/flow-cytometry">http://cfar.ucsd.edu/core-facilities/flow-cytometry</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:cspina@ucsd.edu">Celsa Spina</a>, Assoc Prof</p>
+<p><strong>Alt. Contact:</strong>&#160;<a href="mailto:vaflowcore@vapop.ucsd.edu">Neal Sekiya, Peggy O'Keefe, Dina Sirypangano</a>&#160;(858) 552 8585 ext5933</p>
+<p><strong>Department:</strong>&#160;Center for AIDS Research, Medicine, VASDHS, VMRF</p>
+<p><strong>Description:</strong>&#160; The following flow cytometry services are available:Multiparameter cell phenotyping: 2 to 11 color&#160; antibody combinations.&#160;Analysis of cell activation, proliferation, and apoptosis: cellcycle/DNA content, in combination with BrdU uptake; apoptosis using AnnexinV orcaspase expression, Tunel staining; proliferation using CFSE dye, Ki-67expression; activation using Ca++ flux, up-regulation of surface markerexpression (e.g. CD69, CD38, MHC II), internal expression of cell cycleregulators (e.g. cdK, bcl-2, p53). Analysis and quantification of internalproteins: cytokines and chemokines; cell signaling regulatory proteins; viralor parasite regulatory and structural proteins; FRET analysis. Quantificationof molecular promoters and reporter genes: expression of GFP, DsRed, mCherry,beta-gal, HSA, etc. Analysis of cell and tissue slide preparations:multiparameter cell phenotyping and DNA analysis. Small to large volume,high-speed cell sorting, single-cell deposition, and cloning.&#160; Live cell sorting of biohazardoussamples.&#160; Core instruments includea Beckman Coulter MoFlo Sorter, a BD FACSAria II Sorter, 2 BD FACSCanto&#160; Analyzers &#160;and a Compucyte Laser Scanning Cytometer.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">CFAR Genomics and Sequencing Core</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://cfar.ucsd.edu/core-facilities/genomics-sequencing-core">http://cfar.ucsd.edu/core-facilities/genomics-sequencing-core</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:dlooney@ucsd.edu">David Looney</a>, Professor of Medicine</p>
+<p><strong>Alt. contact:&#160;</strong><a href="mailto:srought@ucsd.edu">Steffney Rought</a></p>
+<p><strong>Department:</strong>&#160;Center for AIDS Research</p>
+<p><strong>Description:</strong>&#160; The Genomics and Sequencing Core is a full-service core facility providing services, reagents and expertise to perform assays ranging from small-scale to large-scale analysis of gene expression, microRNA detection, SNP detection, TaqMan Low Density Arrays, SABiosciences Arrays and HIV quantitation.&#160;&#160; We have over 15 years of experience in experimental design, consultation, nucleic acid extraction, cDNA synthesis, primer design, qPCR with SYBR Green or TaqMan assays, and more recently, droplet digital PCR. &#160; &#160;Core equipment includes: Applied Biosystems 7900HT Fast Real-Time PCR System (with all available blocks),&#160; Applied Biosystems 7500 Real-Time PCR System, two Bio-Rad (formely QuantaLife) QX100 Droplet Digital PCR Systems, Agilent 2100 Bioanalyzer,&#160; Thermo Scientific NanoDrop ND-1000 and ND-8000 spectrophotometers, Qiagen QIAcube, and Life Technologies Ion Torrent system.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">CFAR Molecular Biology Core</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://cfar.ucsd.edu/core-facilities/molecular-biology/">http://cfar.ucsd.edu/core-facilities/molecular-biology</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:dlooney@ucsd.edu">David Looney</a>, Professor&#160;</p>
+<p><strong>Department:</strong>&#160;Center for AIDS Research</p>
+<p><strong>Description:</strong>&#160;DNA sequencing, qualitative and quantitative viral PCR (HIV-1, HIV-2/SIV, KSHV, EBV, MLV), custom plasmid/vector construction and preparation, HIV &amp; HCV genotyping, selected mammalian genotyping (CCR5delta32, ApoE, BDNF,&#160; ITPA, IL28b, sclo1b1). Core equipment includes ABI3100 genetic analyzer, shared access to ABI7500 realtime PCR, MJ Research PTC-100 &amp; -200, Techne 512 &amp; 412 PCR.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">CFAR Protein Expression and Proteomics Core</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://cfar.ucsd.edu/core-facilities/protein-expression-and-proteomics-pep">http://cfar.ucsd.edu/core-facilities/protein-expression-and-proteomics-pep</a> 
+<p><strong>Faculty Director</strong>:&#160;<a href="mailto:btorbett@ucsd.edu">Bruce Torbett</a>, Assoc Prof&#160;</p>
+<p><strong>Department:</strong>&#160;Center for AIDS Research</p>
+<p><strong>Description:</strong>&#160;The Protein Expression portion of the Core, under the direction of Dr. John Elder, is oocated at Scripp's Research Institute and maintains and provides appropriate vectors and cell lines to facilitate expression cloning of proteins of interest and aid in protein production.&#160;The Proteomics portion of the Core, under the direction of Dr. Bruce Torbett,is at UCSD and provides protein analysis services for CFAR investigators. These services include protein extraction from viruses, cells, and tissues; protein resolution and quantification using 1- and 2-dimensional (D) electrophoresis and appropriate imaging systems; and protein identification using mass spectroscopy.&#160;The Core has a Bio-Plex instrument and offers Luminex technology for identification of up to 100 proteins or analytes from a single, small volume sample.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">CFAR Translational Virology Core</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://cfar.ucsd.edu/core-facilities/translational-virology-core">http://cfar.ucsd.edu/core-facilities/translational-virology-core</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:davey@ucsd.edu">David Smith</a>, Asst Prof&#160;</p>
+<p><strong>Department:</strong>&#160;Center for AIDS Research</p>
+<p><strong>Description:</strong>&#160;Provides specimen processing, shipping, storage, nucleic acid preps, sequencing, analysis, and HIV&#160; clinical assays. Core equipment includes ABI sequencer, plate reader, 8 pcr thermocyclers.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Chemistry and Biochemistry Fabrication Facility</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://chemistry.ucsd.edu/research-facilities/facilities-shops/fab-facility/">http://chemistry.ucsd.edu/research-facilities/facilities-shops/fab-facility/</a> 
+<p><strong>Facility Director:</strong>&#160;<a href="mailto:rgp@chem.ucsd.edu">Bob Parker</a>, Shop Supervisor</p>
+<p><strong>Department:</strong>&#160;Chemistry &amp; Biochemistry</p>
+<p><strong>Description:</strong>&#160;The Fabrication Facility, located in room 1610 of York Hall, is a full service development, renovation, demolition, and machine and wood shop. As a recharge facility, services may be extended to any of the academic departments at UCSD, as well as SIO.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Chemistry and Biochemistry Biophysics Instrumentation Facility</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://biophysicsfacility.ucsd.edu/">http://biophysicsfacility.ucsd.edu/</a> 
+<p><strong>Facility Director:</strong>&#160;<a href="mailto:rgp@chem.ucsd.edu"></a><a href="mailto:ekomives@ucsd.edu">Betsy Komives</a>&#160;and&#160;<a href="mailto:pajennin@chem.ucsd.edu">Pat Jennings</a></p>
+<p><strong>Department:</strong>&#160;Chemistry &amp; Biochemistry</p>
+<p><strong>Description:</strong>&#160;The Biophysics Instrumentation Facility houses a Biacore 3000, a Beckman XLI Analytical Ultracentrifuge, an Applied Photophysics Stopped-flow fluorimeter, two Aviv CD spectrometers and two Microcal VP isothermal titration calorimeters. The instruments are located in the Natural Sciences building, Urey Hall, and Pacific Hall. The use of the instruments is limited to trained users. Each of these instruments has a faculty in charge. If you would like to become a user, you should first contact the faculty in charge of the particular instrument you wish to use in order to arrange for training. Once the faculty in charge has approved, you can obtain a login to access the online scheduling that is available for each instrument.</p>
+<p><strong>Active Recharge:</strong>&#160;No</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Chemistry Molecular Mass Spectrometry Facility</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <p><strong>Website:&#160;</strong><a href="http://massspec.ucsd.edu/mmsf/">http://massspec.ucsd.edu/mmsf/</a></p>
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:scohen@ucsd.edu">Seth Cohen</a>, Assoc Prof</p>
+<p><strong>Facility Director:&#160;</strong><a href="mailto:yxsu@ucsd.edu">Yongxuan Su</a>, Senior Development Engineer</p>
+<p><strong>Department:</strong>&#160;Chemistry &amp; Biochemistry</p>
+<p><strong>Description:</strong>&#160;The Molecular Mass Spectrometry Facility (MMSF) houses two Thermo LCQdeca-MS, a Thermo LCQdeca XPplus MS, a &#160;Micromass Quattro Ultima Triple Quadrupole MS, an Agilent 6230 Accurate-Mass high resolution TOFMS, a Thermo Traceplus GC-MS, a Thermo MAT900XL high resolution MS, a Bruker Biflex IV MALDI-TOFMS, an Agilent 1100 HPLC, and two Agilent 1260 HPLC systems. The goal of the facility is provide collaborative interaction with mass spectrometry experts so that the highest quality analysis can be obtained. The MMSF provides routine MS and MS/MS, LC-MS, HR-MS, LC-HR-MS analysis on various types of samples including synthetic organic molecules, synthetic peptides, natural products, organometallic compounds, intact proteins, and oligonucleotides.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Chemistry Nuclear Magnetic Resonance Facility</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website</strong>:&#160;<a href="http://nmr.ucsd.edu/">http://nmr.ucsd.edu/</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:sopella@ucsd.edu">Stan Opella</a>, Professor&#160;</p>
+<p><strong>Alt. contact:&#160;</strong><a href="mailto:amrse@ucsd.edu">Anthony Mrse</a>,&#160;<a href="mailto:xhuang@ucsd.edu">Xuemei Huang</a>&#160;</p>
+<p><strong>Department:</strong>&#160;Chemistry &amp; Biochemistry</p>
+<p><strong>Description:</strong>&#160;The Chemistry NMR facility features a 500MHz, two 400Mhz, and 300 MHz Varian spectrometers and is located in rooms 5140 and 6118 of Pacific Hall. The Biomolecular NMR facility features a Varian 800MHZ, a Bruker 600MHz and a Varian 500MHz and is located in B007&#160; of the Natural Sciences Building.&#160;Reservations are made on a day-to-day basis. During normal business hours, sign-up time is limited to 45 minutes on the 300 and the two 400s. Experiments requiring more time should be performed during the evenings or weekends. For reservation limitations on the 500, please visit the 500 scheduling page. Please note that while all of the facility's spectrometers are capable of a standard battery of experiments, for non-standard applications, please identify which spectrometer fits your needs best before reserving time. If your project has time requirements that extend beyond the normal boundaries of what is available on the scheduler or you experience problems with the instruments, please contact us at nmr@chem.ucsd.edu with your request. This will direct your query to everyone involved with maintaining the NMR facility. Core equipment includes Varian VNMRS 800 NMR with 3x Resonance Cold Probe (NSB), Varian VNMRS 500 NMR (NSB), Bruker Avance 600 NMR with 3x Resonance Cryoprobe (NSB),&#160; Varian VNMRS 500 NMR with Xsens Cold Probe (Pacific Hall), JEOL ECA 500 NMR (Pacific Hall), Varian Mercury Plus 400 NMR (Pacific Hall), Varian Mercury 400 NMR (Pacific Hall), and a Varian Mercury 300 NMR (Pacific Hall)</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Chemistry Stockroom</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://chemistry.ucsd.edu/research-facilities/facilities-shops/stockroom/">http://chemistry.ucsd.edu/research-facilities/facilities-shops/stockroom/</a> 
+<p><strong>Facility Directors:</strong>&#160;<a href="mailto:jgl@chem.ucsd.edu">John Lasky</a>&#160;and&#160;<a href="mailto:djm@chem.ucsd.edu">Dan McMullin</a></p>
+<p><strong>Department:</strong>&#160;Chemistry &amp; Biochemistry</p>
+<p><strong>Description:&#160;</strong>The Stockroom is located on the first floor of Urey Hall. We offer a variety of laboratory and office products, from special chemicals to ordinary office supplies. In addition, a selection of standard tools and electronics components is available. As a recharge facility, the Stockroom extends its services to groups possesing a valid index number, including any of the academic departments at UCSD, as well as SIO.<br/>
+ The Stockroom Telephone Number is (858) 534-2017</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Clinical Research Biomarker Lab</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <p><strong>Faculty Director:</strong>&#160;<a href="mailto:pmills@ucsd.edu">Paul Mills</a>, Professor&#160;</p>
+<p><strong>Department:</strong>&#160;Psychiatry</p>
+<p><strong>Description:</strong>&#160;Provides blood, urine and tissue assays of numerous neuroimmune markers</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Clinical Laboratory Services</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://pathology.ucsd.edu/ucsd_center_for_advanced_laboratory_medicine.htm">http://pathology.ucsd.edu/ucsd_center_for_advanced_laboratory_medicine.htm</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:rmclawhon@ucsd.edu">Ronald McLawhon</a>, Clin Prof&#160;</p>
+<p><strong>Alt. Contact:</strong>&#160;<a href="mailto:ltamashiro@ucsd.edu">Lorraine Tamashiro</a></p>
+<p><strong>Department:</strong>&#160;Pathology</p>
+<p><strong>Description:</strong>&#160;Provides clinical laboratory services for the UCSD Medical Centers (Hillcrest and La Jolla) as part of the Department of Pathology.</p>
+<p><strong>Active Recharge:</strong>&#160;No</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Clinical Pharmacology and Assay Laboratory</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://www.pediatrics.ucsd.edu/Divisions/Pharmacology%20and%20Drug%20Discover/Clinical%20Pharmacology%20and%20Assa/Pages/default.aspx">http://www.pediatrics.ucsd.edu/Divisions/Pharmacology and Drug Discover/Clinical Pharmacology and Assa/Pages/default.aspx</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:ecapparelli@ucsd.edu">Edmund Capparelli</a>, Clin Pharmacist&#160;</p>
+<p><strong>Alt. contact:</strong>&#160;<a href="mailto:ssrossi@ucsd.edu">Steven Rossi</a></p>
+<p><strong>Department:</strong>&#160;Pediatrics</p>
+<p><strong>Description:</strong>&#160;Provides quantitative assays of pharmaceutical agents and biochemical markers. Core equipment includes 3 Beckman HPLCs, 1 Thermo Separation&#160;LC/MS, and 1 LCQ Duo Thermo-Finnigan MS.</p>
+<p><strong>Active Recharge:</strong>&#160;No</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">CMM Electron Microscopy</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://emcore.ucsd.edu/TEM.html">http://emcore.ucsd.edu/TEM.html</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:mfarquhar@ucsd.edu">Marilyn Farquhar</a>, Professor</p>
+<p><strong>Alt. contact:&#160;</strong><a href="mailto:tmeerloo@ucsd.edu">Timo Meerloo</a></p>
+<p><strong>Department:</strong>&#160;Cellular Molecular Medicine</p>
+<p><strong>Description:</strong>&#160;EM core provides services such as routine morphology on ultrathin sections of plastic embedded material, immunogold labeling of ultrathin cryosections, and negative staining of small biomaterials and nanoparticles.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">CORE Bio Services</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="https://corebio.ucsd.edu/">https://corebio.ucsd.edu/</a> 
+<p><strong>Facility Director:</strong>&#160;<a href="mailto:sleader@ucsd.edu">Fritz Leader</a><a href="mailto:mfarquhar@ucsd.edu"></a></p>
+<p><strong>Alt. contact:</strong>&#160;<a href="mailto:core@ucsd.edu">Core orders/questions</a></p>
+<p><strong>Department:</strong>&#160;School of Medicine</p>
+<p><strong>Description:</strong>&#160;Core Bio Services offers high quality biotech products and services at competitive prices to the campus research community and to the San Diego biotech community. Core stocks restriction enzymes, modifying enzymes, transformation and transfection products, growth factors, ultrapure reagents, DNA sequencing and much more from a variety of vendors. Core also provides secure liquid nitrogen storage for cell lines and biologicals.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Cryo-Electron Microscope Facility</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://cryoem.ucsd.edu/access/facil-access.shtm">http://cryoem.ucsd.edu/access/facil-access</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:tsb@ucsd.edu">Timothy Baker</a>, Professor</p>
+<p><strong>Alt. contact:&#160;</strong><a href="mailto:nholson@ucsd.edu">Norm Olson</a>, (858) 822 6718</p>
+<p><strong>Department:</strong>&#160;Chemistry &amp; Biochemistry, Molecular Biology</p>
+<p><strong>Description:</strong>&#160;The Cryo-Electron Microscopy Facility is available to UCSD faculty, staff and students and also to members of the non-profit research institutions on the Torrey Pines Mesa. &#160;The FEI Tecnai G2 Polara is a 300KV transmission electron microscope (TEM) equipped with a field emission gun (FEG). It has a newly developed stage that allows for examination of multiple, vitrified samples at either liquid nitrogen or liquid helium temperatures. The FEI Tecnai G2 Sphera is a 200KV TEM equipped with a LaB6 electron gun. &#160;It has the standard holder for dry samples and two Gatan cryotransfer holders. The Polara is equipped with the SerialEM tomography software and the Leginon image acquisition system. Both microscopes are available for use on a recharge basis, however use of the Polara will be restricted to those scientists whose projects require the higher resolution afforded by the FEG or the greater stability of the Compustage. &#160;The only sample preparation techniques performed in the facility are plunge freezing of particulate samples for cryomicroscopy and negative staining. &#160;Operation of the instruments by Facility staff is available as is hands-on training on the instruments.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">CTRI Biomarker Lab</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <p><strong>Website:</strong>&#160;<a href="http://ctri.ucsd.edu/laboratory/Pages/biomarker.aspx">http://ctri.ucsd.edu/laboratory/Pages/biomarker.aspx</a></p>
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:dboyle@ucsd.edu">David Boyle</a>, Professor of Medicine</p>
+<p><strong>Alt. Contact:</strong>&#160;<a href="mailto:mrosenbach@ucsd.edu">Michael Rosenbach</a>, Translational Researcher</p>
+<p><strong>Admin.&#160; Contact</strong>:&#160;&#160;<a href="mailto:pfletcherrice@ucsd.edu">Pam Fletcher-Rice</a></p>
+<p><strong>Department:</strong>&#160;Clinical Translational Reserach Institute</p>
+<p><strong>Description:</strong>&#160;Core provides validated Enzyme Immunoassay Services, Singleplex and Multiplex Immunoassays, and DNA extractions. Core equipment includes: &#160;1) NanoPro 1000 and Simon; 2) QiaSymphony; &#160;3)Omni Beadruptor 24; &#160;4)Molecular Devices Spectramax M5, Spectramax 340pc384, and SkanWasher 300; 5) Mesoscale Discovery Sector Imager 2400; 6) Eppendorf epMotion 5070 Pipetting Robot; and 7) Corbett Robotics/Qiagen CAS1820 Nucleic Acid Extractor.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">CTRI Biostatistics Core</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://ctri.ucsd.edu/Informatics/Pages/Biostatistics.aspx">http://ctri.ucsd.edu/Informatics/Pages/Biostatistics.aspx</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:rxu@ucsd.edu">Lily Xu</a>, Professor</p>
+<p><strong>Alt. Contact:</strong>&#160;<a href="mailto:mdonohue@ucsd.edu">Michael Donohue</a>, Assistant Professor</p>
+<p><strong>Department:</strong>&#160;Clinical Translational Reserach Institute, Family and Preventative Medicine</p>
+<p><strong>Description:</strong>&#160;The Biostatistics faculty and staff advise and collaborate with CTRI researchers on biostatistics, bioinformatics, and epidemiology. In addition to common statistical tools, the faculty and staff have expertise in areas including reproducible research reporting, R Bioconductor, and&#160;high performance computing.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Deuterium Exchange Mass Spectrometry</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <p><strong>Faculty Director:</strong>&#160;<a href="mailto:vwoods@ucsd.edu">Virgil Woods</a>, Professor&#160;</p>
+<p><strong>Department:</strong>&#160;Medicine</p>
+<p><strong>Description:</strong>&#160;Provdes deuterium exchange MS to study protein flexibility and solvent accessibility. Advanced protein structure analysis employing hydrogen exchange and mass spectrometry. Core equipment includes Orbitrap Velos with ThermoFisher ETD.</p>
+<p><strong>Active Recharge:</strong>&#160;No</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Drosophila Recharge Facility (aka Fly Kitchen) </a>
+        </h2>
+        
+        <div class="accordion_body">
+        <p><strong>Website:</strong> &#160;<strong>Authorized access only at: <a>https://dbsportal.ucsd.edu/protectedinfo/fly_kit_fill</a></strong></p>
+<p><strong><a href="https://dbsportal.ucsd.edu/protectedinfo/fly_kit_fill"></a></strong><strong>Faculty Director:</strong> Jing Wang</p>
+<p><strong>Alternate Contact:</strong> <a href="http://act.ucsd.edu/directory/faculty_staff?list_code=8554">Hernandez, Simeon D. (Sam)</a></p>
+<p><strong>Department:</strong> &#160;Division of Biological Sciences</p>
+<p><strong>Description:</strong> The Drosophila Media Prep Kitchen, located in Bonner Hall, is dedicated to providing investigators with high quality media for Drosophila research and genetic stock maintenance. In the centralized kitchen, three types of media are prepared in large quantities in a steam-jacketed food kettle . Media is pumped into trays of glass vials (10ml) or glass bottles (30ml) depending on research needs. Media is prepared according to a strict protocol that ensures consistency in diet and the absence of any bacterial, fungal or insect contamination. Researchers return trays of bottles and vials to the facility where they are autoclaved, washed, and filled again.</p>
+<p><strong>Services included:</strong> Fly Foods (Bloomington/New, Texas/Old, <strong>&amp;</strong> Banana) &#8211; Washing Vials</p>
+<p><strong>Active Recharge:</strong> Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Drosophila Species Stock Center</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <p><strong>Website</strong>:&#160;<a href="https://stockcenter.ucsd.edu/info/welcome.php">https://stockcenter.ucsd.edu/info/welcome.php</a></p>
+<p><strong>Faculty Director</strong>:&#160;<a href="mailto:tmarkow@ucsd.edu">Therese Markow</a>, Professor</p>
+<p><strong>Alternate Contact</strong>:&#160;<a href="mailto:mpolihronakis@ucsd.edu">Maxi Richmond</a>, (858) 246 0350</p>
+<p><strong>Department</strong>: Cell and Developmental Biology</p>
+<p><strong>Description</strong>: The Drosophila Species Stock Center maintains a living collection of over 250 Drosophila species represented by 1500 stocks that are used by biological researchers focusing on questions in evolution, ecology, developmental biology, physiology, neurobiology, comparative genomics, and immunology. Each species in the Center varies with respect to the number of strains maintained, reflecting factors such as close phylogenetic relationship to species with sequenced genomes, the presence of genetically marked or transgenic stocks, the availability of stocks from diverse collection localities, and the ease with which stocks can be obtained and reared.</p>
+<p><strong>Active Recharge</strong>: Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Exercise and Physical Activity Resource Center</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website</strong>:&#160;<a href="http://www.ucsdeparc.org/">http://www.ucsdeparc.org/</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:kpatrick@ucsd.edu">Kevin Patrick</a>, Professor</p>
+<p><strong>Alt. Contact:</strong>&#160;<a href="mailto:dwing@ucsd.edu">David Wing</a>, (858) 534 9315</p>
+<p><strong>Department:</strong>&#160;Family &amp; Preventative Medicine</p>
+<p><strong>Description:</strong>&#160;Equipment rental, consultation, data processing, and software support services to support measurement of physical activity and sedentary behavior (PA/SB) in the context of health-related research. This relates to PA/SB in the form of independent, moderating or dependent variable. EPARC maintains a fully equipped state-of-the-science exercise physiology laboratory to support the research community, train medical students and residents, and conduct comprehensive health-related fitness and performance assessments for the general public. EPARC also serves as an independent testing laboratory for the commercial health and fitness sector. We provide opportunities to assess and validate new technologies under non-disclosure agreements, and we also offer a laboratory-loan program for R&amp;D departments. For more information download the digital brochure.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Glycotechnology Core Resource</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website</strong>:&#160;<a href="http://glycotech.ucsd.edu/">http://glycotech.ucsd.edu/</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:bchoudhury@ucsd.edu">Biswa Choudhury</a>, Technical Director</p>
+<p><strong>Department:</strong>&#160;Cellular Molecular Medicine</p>
+<p><strong>Description:</strong>&#160;Structural analysis of glycans isolated from cell and tissue samples using different analytical techniques such as HPLC and Mass spectrometry. This include the monosaccharide composition analysis, bacterial polysaccharide analysis, N- and O-linked glycans, Sialic acid analysis and Glycosamino glycan analysis. Core equipment includes Dionex ICS 3000 for HPAEC-PAD/IC DC-2,&#160; Dionex DX-600 Dual HPAEC-PAD/UV/FL,&#160; UPLC-FL (Waters) Applied Biosystem QStar-XL oMALDI,&#160; and a Thermo LTQ Orbitrap Discovery Hybrid Mass Spectrometer.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Hillcrest Research Flow Cytometry Core</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <p><strong>Faculty Director:</strong>&#160;<a href="mailto:s1hong@ucsd.edu">Suzi Hong</a>, Asst Prof</p>
+<p><strong>Department:</strong>&#160;Psychiatry</p>
+<p><strong>Description:</strong>&#160;Antibody staining, sample acquisition &amp; analysis for: leukocyte phenotyping&#160; intracellular cytokine expression&#160;cell cycling analysis&#160;cell death analysis, etc. Core equipment includes BD FACSCalibur euipped with FACSFlow Supply System and Automatic Loader</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Human and Animal Tissue Technology Core</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://pathology.ucsd.edu/human_and_animal_tissue_technology_center.html">http://pathology.ucsd.edu/human_and_animal_tissue_technology_center.html</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:srvandenberg@ucsd.edu">Scott VandenBerg</a>, Professor</p>
+<p><strong>Alt. contact:</strong>&#160;<a href="mailto:dpizzo@ucsd.edu">Don Pizzo</a>, Senior Research Associate</p>
+<p><strong>Department:</strong>&#160;Pathology</p>
+<p><strong>Description:</strong>&#160;Services include tissue processing, embedding, sectioning, H&amp;E staining, special stains, immunohistochemistry (IHC)/immunoflourescence (IF) and in situ hybridization (ISH). Technical training on instrumentation and protocol, consultation, and photomicroscopy are also available. Consultation to the researcher furthers their understanding of applications in their research program.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Human Embryonic Stem Cell Core Facility</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website</strong>:&#160;<a href="http://humanstemcellcore.ucsd.edu/">http://humanstemcellcore.ucsd.edu/</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:kwillert@ucsd.edu">Karl Willert</a>, Asst Professor</p>
+<p><strong>Alt. contact:</strong>&#160;<a href="mailto:edoconnor@ucsd.edu">Eric O'Connor</a></p>
+<p><strong>Location:</strong>&#160;Sanford Consortium for Regenerative Medicine, 1st Floor.</p>
+<p><strong>Department:</strong>&#160;UCSD Stem Cell Program and the Sanford Consortium for Regenerative Medicine</p>
+<p><strong>Description:</strong>&#160;Cell culture facilities: Self-serve use of biosafety cabinets, incubators, and other facilities for pluripotent cell culture hESC &amp; FACS training: Training in hESC culture methods, and preparation of cultures for FACS sorting &amp; analysis &#160;Core equipment includes automated microscopy using Cellomics automated microscope self-serve, &#160;confocal microscopy using Olympus FV 1000 Confocal Microscope self-serve, &#160;real time qPCR using ABI 7900 HT, &#160;electroporation using Amaxa Nucleofector II self-serve, &#160;plate reading using Perkin Elmer Envision self-serve, &#160;flow sorting via FACS Aria II operator service, &#160;flow sorting via FACS Canto self-serve, analysis and graphics for flow cytometry data using Flowjo software, reagents and special plastics for hESC culture and FACS cell sorting &amp; analysis.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">IGM Genomics Center</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://igm.ucsd.edu/core-services/">http://igm.ucsd.edu/core-services/</a> 
+<p><strong>Director:</strong>&#160;<a href="mailto:kjepsen@ucsd.edu">Kristen Jepsen</a>, PhD</p>
+<p><strong>Alt. contact:</strong>&#160;<a href="mailto:rorlando@ucsd.edu">Rebecca Orlando</a>, Staff Res Assoc, (858) 822-4231</p>
+<p><strong>Department:</strong>&#160;Institute for Genomic Medicine (IGM)</p>
+<p><strong>Description:</strong>&#160;The IGM Genomics Facility at the University of California, San Diego, is a core research facility overseen by the IGM. Located in Leichtag 172, the IGM Genomics Facility provides a variety of services, including sequencing library preparation and sequencing on Illumina's HiSeq2500/2000 and MiSeq platforms as well as on the PacBio RS II Sequencing System. We also process Illumina Infinium Beadchips, which includes a variety of whole-genome genotyping (WGGT) arrays as well as the Infinium HumanMethylation450 BeadChip. For our complete offerings, please visit the Services tab. The mission of the IGM Genomics Facility is to provide UCSD researchers, as well as researchers in the greater UC community, high quality standard, cutting-edge, and custom genomics services as well as consultation on experimental design and training/education about genomic methods. We can also provide our services to researchers at other research institutions and to industry.</p>
+<p><strong>Services:</strong>&#160;Study Design Consultation, Sample QC, Covaris Shearing, Next Gen Sequencing Library Prep (RNA/DNA/SmallRNA), Exome Sequencing, Illumina Sequencing Runs, Genotyping Arrays, Methylation Arrays, PacBio SMRT Sequencing</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Levantine Archaeology Lab</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <p><strong>Websites:</strong>&#160;<a href="http://anthro.ucsd.edu/%7etlevy">http://anthro.ucsd.edu/%7etlevy</a>&#160;and&#160;<a href="http://cisa3.calit2.net/arch/">http://cisa3.calit2.net/arch/</a></p>
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:tlevy@ucsd.edu">Thomas Levy</a>, Distinguished Professor&#160;</p>
+<p><strong>Department:</strong>&#160;Anthropology</p>
+<p><strong>Description:</strong>&#160;The UC San Diego Levantine Archaeology provides hands-on research, learning and training to interested students and researchers from around the world. &#160;Archaeology research and service helps coordinate the Cyber-archaeology data acquisition, curation, analyses, and dissemination. &#160;The laboratory has extensive study collections from the southern Levant that include materials spanning the Neolithic to Medieval Islamic times (ca. 8,000 BCE to 1400 CE). &#160;These includes ceramics, lithics, archaeometallurgy, zooarchaeology and human osteology collections.&#160;The lab has a comprehensive collection of topographic and environmental maps, reference materials, computing facilities, laboratory spaces for artifact analyses, digital field equipment, administrative office, and seminar room. Permanent loan agreement with the Department of Antiquities of Jordan has facilitated the growth of the study collection since 1997.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">MAE Dynamic Testing and Characterization Facility</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://www-ceam.ucsd.edu/">http://www-ceam.ucsd.edu/</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:snematnasser@ucsd.edu">Sia Nemat-Nasser</a>, Professor&#160;</p>
+<p><strong>Alt. contact:&#160;</strong><a href="mailto:ljacobscohantz@ucsd.edu">Lauri Jacobs-Cohantz</a></p>
+<p><strong>Department:</strong>&#160;Mechanical Aerospace Engineering</p>
+<p><strong>Description:</strong>&#160;The Center of Excellence for Advanced Materials (CEAM) Research Core Facility specializes in measurement of the dynamic properties of materials. This includes high strain rate testing using both tension and compression split Hopkinson bars as well as ballistic and impact testing.&#160;A variety of diagnostics are available including high speed photography as well as flash X-ray and a variety of optical techniques.&#160;CEAM has the capability to test a wide variety of materials including ceramics, metals, composites, concrete, and polymers at the appropriate strain rates and temperatures.&#160;Strain rates from below 100/sec to more than 30,000/sec are possible, temperatures range from -180 C to 1000 C. In addition to the dynamic facilities, quasi-static testing is also available. Core equipment includes: Split Hopkinson bars from 3 mm diameter to 76 mm diameter in both tension and compression (5 total), 25.4mm inch light gas gun 1 km/sec velocity, 56 mm Light gas gun 1 km/sec velocity, 150 mm Light gas gun 400/sec velocity, Imacon 200 Highspeed framing camera 16 frames maximum frame rate 5 nanosec/frame, HP 150 and 450 KV flash X-rays, Instron 20 Kip load frame, MTS biaxial 5 kip load frame, MTS 20 Kip load frame, MTS 50 kip load frame, Matec TB 1000 Ultrasonic analyzer, and a Ritec GA 2500 based Ultrasonic analyzer.</p>
+<p><strong>Active Recharge:</strong>&#160;No</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">MAE Electron Microsope Facility</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <p><strong>Faculty Director:</strong>&#160;<a href="mailto:sujin@ucsd.edu">Sungho Jin</a>, Professor&#160;</p>
+<p><strong>Department:</strong>&#160;Mechanical and Aerospace Engineering</p>
+<p><strong>Description:</strong>&#160;Scanning Electron Microscopy (SEM) -&#160; FEI XL30 ESEM-FEG</p>
+<p><strong>Active Recharge:</strong>&#160;No</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">MCC Biorepository and Tissue Technology</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://cancer.ucsd.edu/research-training/shared-resources/Pages/biorepository.aspx"></a><a href="http://cancer.ucsd.edu/research-training/shared-resources/biorepository/Pages/default.aspx">http://cancer.ucsd.edu/research-training/shared-resources/biorepository/Pages/default.aspx</a> 
+<p><strong>Faculty Director:</strong>&#160;Scott VandenBerg, Professor</p>
+<p><strong>Faculty Co-Director</strong>: Richard Schwab, Asst Prof</p>
+<p><strong>Department:</strong>&#160;Moores Cancer Center</p>
+<p><strong>Description:</strong>&#160;The biorepository is a tissue bank containing human specimens with clinical annotation including primary tumor, primary mouse xenografts, plasma, serum, RNA stabilized buffy coat cells and urine.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">MCC Biostatistics</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://cancer.ucsd.edu/research-training/shared-resources/Pages/biostatistics-bioinformatics.aspx">http://cancer.ucsd.edu/research-training/shared-resources/Pages/biostatistics-bioinformatics.aspx</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:kmesser@ucsd.edu">Karen Messer</a>, Professor</p>
+<p><strong>Department:</strong>&#160;Moores Cancer Center</p>
+<p><strong>Description:</strong>&#160;Provides biostatistical and bioinformatic support for data analysis.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">MCC Flow Cytometry</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://cancer.ucsd.edu/RESEARCH-TRAINING/SHARED-RESOURCES/FLOW-CYTOMETRY/Pages/default.aspx">http://cancer.ucsd.edu/RESEARCH-TRAINING/SHARED-RESOURCES/FLOW-CYTOMETRY/Pages/default.aspx</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:tkipps@ucsd.edu">Thomas Kipps</a>, Professor&#160;</p>
+<p><strong>Alt. Contact:&#160;</strong><a href="mailto:djyoung@ucsd.edu">Dennis Young&#160;</a></p>
+<p><strong>Department:</strong>&#160;Moores Cancer Center</p>
+<p><strong>Description:</strong>&#160;Analytical Flow Cytometry: Utilizes a Becton Dickinson FACSCalibur, a 4-color, dual-laser benchtop flow cytometer. Included is the CellQuest software for list-mode data recording and analysis. Data recording and analysis can be performed with the FACS Aria, a triple-laser, multiparameter flow cytometer using up to 11-color fluorescence signals, along with forward and side-angle light scatter. Cell Sorting: In addition to analytical experiments, the FACSAria can perform aseptic sorting of living cell subpopulations utilizing various criteria, such as intrinsic cell properties, e.g. DNA content, Green Fluorescent Protein (GFP), or extrinsic properties, such as molecular markers identified by fluorescently-labelled monoclonal antibodies. Automated Magnetic Cell Sorting (autoMACS): Used for convenient isolation of rare cell subpopulations or large numbers cells, up to 4 x 109. Its use of magnetic particles for cell separation is both useful and efficient, and the cells can then go straight to FACS analysis or further sorting.&#160; Consultation: In addition to education about the functionality and capabilities of the Shared Resource, technical support personnel also advise in the design of experiments and assist investigators in the initiation of pilot projects, provide limited amounts of specific reagents, and contribute detailed consultation in analysis of data. Core equipment includes 3 Becton Dickinson FACSCaliburs, 1 BD FACSAria I and 1BD FACSAria II.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">MCC Genomics and Bioinformatics Shared Resource</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <p><strong>Website</strong>:&#160;<a href="http://cancer.ucsd.edu/research-training/shared-resources/Pages/genomics-bioinformatics.aspx">http://cancer.ucsd.edu/research-training/shared-resources/Pages/genomics-bioinformatics.aspx</a></p>
+<p><strong>Faculty Director:</strong>&#160;Kelly A. Frazer, Professor</p>
+<p><strong>Faculty Co-Director:</strong>&#160;Trey Ideker, Professor</p>
+<p><strong>Department</strong>: Moores Cancer Center</p>
+<p><strong>Description</strong>: The major objectives of the Genomics and Bioinformatics Shared Resource are to provide MCC investigators with high quality standard, cutting-edge, and custom genomics services and data analyses, as well as consultation on experimental design and training/education about genomic methods and bioinformatics. To provide expert consultation on experimental designs and analysis approaches of large-scale microarray and NGS datasets. To generate microarray and high-throughput sequence data in a cost-effective efficient manner with rapid-turn around. To perform intermediate analysis of high-throughput sequence data including, DNA variant calling, mRNA isoform calling, miRNA analysis and DNA methylation analysis using established pipelines. To analyze genomic data including tumor profiling for DNA somatic mutations, differential expression analysis, as well as network and systems analysis.</p>
+<p><strong>Active Recharge</strong>: Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">MCC Histology and Immunohistochemistry Core</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://cancer.ucsd.edu/research-training/shared-resources/Pages/histology-and-immunohistochemistry.aspx"></a><a href="http://cancer.ucsd.edu/research-training/shared-resources/biorepository/Pages/histology-and-immunohistochemistry.aspx">http://cancer.ucsd.edu/research-training/shared-resources/biorepository/Pages/histology-and-immunohistochemistry.aspx</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:nvarki@ucsd.edu">Nissi Varki</a>, Professor&#160;</p>
+<p><strong>Alt. Contact:</strong>&#160;<a href="mailto:mlawrence@ucsd.edu">Mary Lawrence</a>, (858) 822-3450</p>
+<p><strong>Department:</strong>&#160;Moores Cancer Center</p>
+<p><strong>Description:</strong>&#160;Provides histological and immunohistochemical technical services. Interpretation of histopathological. Frozen sections Paraffin sections Histology stains Immunohistochemistry Pathology consultation and digital imaging and reports. Core equipment includes Tissue Processor Tissue embeddor, Two Cryostats, 3 microtomes, and DAKO automatic immunostainer.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">MCC In Vivo Imaging Shared Resource</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://cancer.ucsd.edu/research-training/shared-resources/in-vivo-imaging/Pages/default.aspx">http://cancer.ucsd.edu/research-training/shared-resources/in-vivo-imaging/Pages/default.aspx</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:dvera@ucsd.edu">David Vera</a>, Professor&#160;</p>
+<p><strong>Alt. Contact:</strong>&#160;<a href="mailto:jacorbeil@ucsd.edu">Jacqueline Corbeil</a></p>
+<p><strong>Department:</strong>&#160;Moores Cancer Center</p>
+<p><strong>Description:</strong>&#160;The Core provides optical, micro CT, ultrasound, Hi Res planar gamma imaging, and micro PET of mice and rats, as well as high-resolution digital autoradiography and fluorescent imaging of thin whole body rodent sections. Support and expertise includes imaging physics, biological applications, animal support, image computation, optical hardware and software, diagnostic agent chemistry, preparation of F18 and C-11 labeled radiotracers, and kinetic modeling. Core equipment includes GE eXplore Vista PET,&#160; GE eXplore Locus CT,&#160; GE eXplore Optix, BioSpace Gamma Camera, VisualSonics Vevo 770, Vibratome 20 cm Cryomicrotome, and BioRAD FX-Pro-Plus Molecular Imager.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">MCC Microscopy Shared Resource</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://cancer.ucsd.edu/research-training/shared-resources/microscopy/Pages/default.aspx">http://cancer.ucsd.edu/research-training/shared-resources/microscopy/Pages/default.aspx</a> 
+<p><strong>Faculty Director:</strong>&#160;Joseph Gleeson<strong>,</strong>&#160;Professor</p>
+<p><strong>Alt. Contact:&#160;</strong><a href="mailto:kpestonjamasp@ucsd.edu">Kersi Pestonjamasp</a></p>
+<p><strong>Department:</strong>&#160;Moores Cancer Center</p>
+<p><strong>Description:</strong>&#160;Provides deconvolution microscopy, laser scanning confocal microscopy, standard light microscopy, non-invasive optical imaging of small animals, image analysis and scientific visualization. Core equipment includes DeltaVision Deconvolution System, Zeiss LSM520 confocal system, upright and inverted fluorescence microscopes, IVIS200 animal imager, computation workstations, terbyte storage servers.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">MCC Diet and Physical Activity Shared Resource</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://cancer.ucsd.edu/research-training/shared-resources/Pages/nutrition.aspx">http://cancer.ucsd.edu/research-training/shared-resources/Pages/nutrition.aspx</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:clrock@ucsd.edu">Cheryl Rock</a>, Professor</p>
+<p><strong>Faculty Co-Director</strong>: Simon J. Marshall, Assoc Prof</p>
+<p><strong>Alt. Contact:</strong>&#160;&#160;<a href="mailto:dheath@ucsd.edu">Dennis Heath</a>, (858) 822 1123</p>
+<p><strong>Department:</strong>&#160;Moores Cancer Center</p>
+<p><strong>Description:</strong>&#160;This Shared Resource provides services in four areas to a broad range of investigators who have training in general behavioral, social and medical sciences. 1) Dietary assessment and monitoring, including the collection and analysis of dietary data using a variety of approaches, and the development of food content databases and biomarker/biochemical laboratory analysis; 2) behavioral/lifestyle coaching and intervention-related services targeting diet, physical activity, and weight loss; 3) physical activity and sedentary behavior assessment including objective measurement of physical activity and sedentary behavior, using accelerometers and other state-of-the-art tools and technologies; 4) body composition analysis, including regional fat and lean mass, using dual energy x-ray technology. In addition to these specific services, the DPASR also provides consultative services relevant to diet and physical activity assessment, assistance with the development of feasible methods of assessment and intervention, and operational advice, training and guidance to assist in the development of research proposals and interpretation of findings.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">MCC Radiation Medicine</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://cancer.ucsd.edu/research-training/shared-resources/Pages/radiation-medicine.aspx">http://cancer.ucsd.edu/research-training/shared-resources/Pages/radiation-medicine.aspx</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:jmilligan@ucsd.edu">Jamie Milligan</a>, Assoc Res Sci</p>
+<p><strong>Alt. Contact:</strong>&#160;&#160;<a href="mailto:jaguilera@ucsd.edu">Joe Aguilera</a></p>
+<p><strong>Department:</strong>&#160;Moores Cancer Center</p>
+<p><strong>Description:</strong>&#160;This resource provides the opportunity for investigators to pursue an interactive approach to the determination of intrinsic radiation sensitivity. The conduct of radiation assays quantifying radiation sensitivity to ionizing radiation in vitro, as well as mathematical modeling of survival parameters are cornerstone services provided. As a corollary, the resource lends expertise to researchers studying the cell cycle control of DNA damage, and genomic instability induced by ionizing radiation both in vitro and in vivo.&#160;</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">MCC Transgenic Mouse</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://cancer.ucsd.edu/research-training/shared-resources/transgenic-core/Pages/default.aspx">http://cancer.ucsd.edu/research-training/shared-resources/transgenic-core/Pages/default.aspx</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:pmellon@ucsd.edu">Pamela Mellon</a>, Professor</p>
+<p><strong>Alt. Contact:</strong>&#160;&#160;<a href="mailto:stemc@ad.ucsd.edu">Ella Kothari</a></p>
+<p><strong>Department:</strong>&#160;Moores Cancer Center</p>
+<p><strong>Description:</strong>&#160;The Transgenic Mouse shared resource is a state-of-the-art facility that has an outstanding track record in the production of genetically altered mice. Transgenic mice carrying new or novel genes are created by microinjection of DNA into the pronuclei of fertilized eggs. Knock-out mice lacking specific genes of interest are created by homologous recombination in embryonic stem cells followed by injection into blastocysts to create chimeric mice. Highly experienced personnel produce transgenic and knock-out mice for UC San Diego investigators at very reasonable cost and with very short lead times.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Microbiology Laboratory Services</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <p><strong>Faculty Director:</strong>&#160;<a href="mailto:slreed@ucsd.edu">Sharon Reed</a>, Professor&#160;</p>
+<p><strong>Department:</strong>&#160;Pathology</p>
+<p><strong>Description:</strong>&#160;Parasitology, Mycology, Anaerobic cultures, Serology, TB, PCR, Virology. All Microbiology/ Virology Laboratory testing is available to support research protocols. The list is procedures is available on the website or through the supervisors at 619-543-2253. The same equipment as used for patient care. Core equipment includes BD automated blood culture machines, BD Phoenix automated identification and sensitivity testing, FX automated serology machine, Magna Pure and Easy MAG DNA/RNA automated extractors,&#160; a number of PCR Machines including a Roche Light cycler 1.5, 2 Roche COBAS robotic, 2 BD Smart cycler II, Roche Cobas Taqman, a Roche Ampliprep/Taqman, and a MGIT 960 for TB cultures</p>
+<p><strong>Active Recharge:</strong>&#160;No</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Mitochondria DNA Lab</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <p><strong>Faculty Director:</strong>&#160;<a href="mailto:rhaas@ucsd.edu">Richard Haas</a>, Professor</p>
+<p><strong>Department:</strong>&#160;Neurosciences</p>
+<p><strong>Description:</strong>&#160;Mitochondrial DNA panel and the South Blot testing.</p>
+<p><strong>Active Recharge:</strong>&#160;No</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Motion Capture &amp; Brain Dynamics Facility</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://inc.ucsd.edu/%7epoizner/motioncapture.html">http://inc.ucsd.edu/%7epoizner/motioncapture.html</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:hpoizner@ucsd.edu">Howard Poizner</a>, Research Scientist&#160;</p>
+<p><strong>Department:</strong>&#160;Institute for Neural Computation</p>
+<p><strong>Description:</strong>&#160;Motion Capture &amp; Brain Dynamics Facility of the NSF Temporal Dynamics of Learning Center and of the ONR MURI Center for Unsupervised Learning.&#160;&#160;This is a state-of-the-art facility for combined motion capture, EEG, and large-scale immersive virtual reality.&#160;&#160;Equipment includes a PhaseSpace, Inc. 24 camera IMPULSE 3D motion capture system;&#160;PhaseSpace, Inc 4 camera VISION system;&#160;SensAble Technologies, Inc. Phantom Premium 1.5 HF 6 DOF small robots (2 units);&#160;SensAble Technologies, Inc. Phantom Premium 1.0&#160;3 DOF small robots (2 units);&#160; Sensics, Inc. xSight 6123 Panoramic Head-Mounted-Displays (2 units);&#160;SR Research, Inc., EyeLink 1000 Desktop eye tracking system;&#160; WorldViz, Inc., Enterprise Edition (5seat) 3D software toolkit; WorldViz, Inc., Ambisonic Auralizer 3D Sound System (20 channel);&#160; Immersion, Inc., CyberTouch 6 point vibrotactile feedback; Thermo Scientific, Inc., F3 Articulated Robot System;&#160; Polhemus, Inc. Liberty 16 sensor electromagnetic 3D motion tracking system; and a 72 channel active electrode Biosemi, Inc. EEG system.</p>
+<p><strong>Active Recharge:</strong>&#160;No</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Mouse Phenotyping and Pathology Core</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website</strong>:&#160;<a href="http://mousepheno.ucsd.edu/">http://mousepheno.ucsd.edu/</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:nvarki@ucsd.edu">Nissi Varki</a>, Prof&#160;</p>
+<p><strong>Alt. Contact:</strong>&#160;&#160;<a href="mailto:mlawrence@ucsd.edu">MaryAnn Lawrence</a></p>
+<p><strong>Department:</strong>&#160;Pathology</p>
+<p><strong>Description:</strong>&#160;Core provides phenotypic evaluation of animal models of human disease. A careful examination, always with the organs and tissues from littermate controls, of completely back-crossed genetically altered mice at different ages is critical to the understanding of the pathogenesis. The core provides a comprehensive histopathologic review&#160; of a variety of tissues as well as providing education in the harvesting, processin, embedding, staining and interpretation of images.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Murine Hematology, Chemistry &amp; Coagulation Core</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website</strong>:&#160;<a href="http://mousepheno.ucsd.edu/hematology.shtml">http://mousepheno.ucsd.edu/hematology.shtml</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:dzle@ucsd.edu">Dzung T. Le</a>, Assoc Prof&#160;</p>
+<p><strong>Alt. Contact:</strong>&#160;&#160;<a href="mailto:q2chen@ucsd.edu">Qiongyu Chen</a></p>
+<p><strong>Department:</strong>&#160;Pathology</p>
+<p><strong>Description:</strong>&#160;Core provides hematology, coagulation, and blood chemistry analyses for mice and rats. Core equipment inlcudes STart 4 Clot Detection System, Diagnostica Stago&#160;HEMAVET 950FS Multi species Hematology System,&#160;CDC Technologies, Inc. Model 490-4D Four Channel Optical Aggregation System, Chrono-Log Corporation.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Nano3 Nanofabrication Cleanroom Facility</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website</strong>:&#160;<a href="http://nano3.calit2.net/">http://nano3.calit2.net/</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:ylo@ucsd.edu">Yu-Hwa Lo</a>, Professor</p>
+<p><strong>Tech. Director:</strong>&#160;<a href="mailto:bfruhberger@ucsd.edu">Bernd Fruhberger</a></p>
+<p><strong>Department:</strong>&#160;Qualcomm Institute/Calit2</p>
+<p><strong>Description:</strong>&#160;Nano3 provides advanced capabilities for fabrication and characterization in a state-of-the-art cleanroom opened in May 2006. Capabilities include state-of-the art electron-beam lithography, photolithography, thin film deposition, dry etching, back end processing, metrology, materials characterization (Scanning Electron Microscopy (SEM), Atomic Force Microscopy (AFM), etc.), wafer dicing, and microfluidics device development.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">National Center for Microscopy and Imaging Research</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://ncmir.ucsd.edu/research/resources.shtm">http://ncmir.ucsd.edu/research/resources.shtm</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:mellisman@ucsd.edu">Mark Ellisman</a>, Professor&#160;</p>
+<p><strong>Alt. Contact:&#160;</strong>&#160;<a href="mailto:gsosinsky@ucsd.edu">Gina Sosinsky</a></p>
+<p><strong>Department:</strong>&#160;Neurosciences</p>
+<p><strong>Description:</strong>&#160;The National Center for Microscopy and Imaging Research (NCMIR) is located on the University of California, San Diego campus. The mission of NCMIR is to develop technologies to bridge understanding of biological systems between the gross anatomical and molecular scales and to make these technologies broadly available to biomedical researchers. NCMIR provides expertise, infrastructure, technological development, and an environment in which new nformation about the 3D ultrastructure of tissues, cells, and macromolecular complexes may be accurately and easily obtained and analyzed.&#160;NCMIR pursues a coordinated, three-pronged approach to achieving its goals of imaging biological systems on a grand scale, focusing core technology development in three areas.&#160;1 - biological specimen development for intermediate voltage electron microscopes (IVEMs) and correlated microscopies; 2 -&#160;instrumentation, including IVEM, camera development, and Telemicroscopy; 3 - advanced software infrastructure applications and database development.</p>
+<p><strong>Active Recharge:</strong>&#160;No</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Neuroscience Behavioral Testing Core</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://neurosciences.ucsd.edu/RESEARCH/BEHAVIORAL-CORE/Pages/default.aspx">http://http://neurosciences.ucsd.edu/RESEARCH/BEHAVIORAL-CORE/Pages/default.aspx</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:cheyser@ucsd.edu">Charles Heyser</a>, PhD</p>
+<p><strong>Location:</strong>&#160;BSB 3003</p>
+<p><strong>Department:</strong>&#160;Neurosciences</p>
+<p><strong>Description:</strong>&#160;The School of Medicine, in conjunction with the UCSD Neuroscience Behavioral Testing Core, provides state-of-the-art behavioral testing and phenotypic screening of mice and rats across all ages of development.&#160; We offer a large array of well-validated neurobehavioral assessment tools relevant to rodent models of cognitive and neurodegenerative disorders as well as disorders of social interaction.&#160;These tools provide a unique platform for the screening and profiling of experimental therapeutics and genetic rodent models.&#160; Core procedures/equipment for Sensory Motor Function includes:&#160; gait analysis (Noldus CatWalk), activity chambers, rotarod, 28 point neurological scoring and tactile and pain sensitivity.&#160; Core procedures/equipment for Devopmental Testing includes:&#160; developmental milestones/reflexes, maternal behavior, play behavior, and ultrasonic vocalization.&#160; Core procedures/equipment for Cognitive Testing includes:&#160; Morris Water maze, Olton radial maze, Barnes Maze, novel object recognition, avoidance leaerning, fear conditioning, and operant conditioning. The core also offers data analysis services/consultation and data storage for behavioral and pharmacological studies, along with training opportunities for site investigators, including undergraduate and graduate students, and post-doctoral fellows</p>
+<p><strong>Active Recharge:</strong>&#160;Please contact Dr. Heyser for recharge information (<a href="mailto:cheyser@ucsd.edu">cheyser@ucsd.edu</a>)</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Radioimmunoassay Core</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <p><strong>Faculty Director:</strong>&#160;<a href="mailto:rjchang@ucsd.edu">R. Jeffrey Chang</a>, Professor</p>
+<p><strong>Alt. contact:&#160;</strong><a href="mailto:j14wong@ucsd.edu">Jeff Wong</a></p>
+<p><strong>Department:</strong>&#160;Reproductive Medicine</p>
+<p><strong>Description:</strong>&#160;Provides reproductive endocrinology services. Andrology Lab: semen analysis, sperm preparation. Hormone Assay Core: measurements of protein and steriod hormones.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Radiology Imaging Lab MEG</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://ril.ucsd.edu/">http://ril.ucsd.edu/</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:rrlee@ucsd.edu">Roland Lee</a>, Professor&#160;</p>
+<p><strong>Department:</strong>&#160;Radiology</p>
+<p><strong>Description:</strong>&#160;Magnetoencephalography (MEG) is an advanced non-invasive functional brain imaging technique which measures the magnetic fields emitted by brain cells (neurons), which can display the location of brain activity, as it occurs in real time. Besides being used to localize epileptic discharges in the brains of patients with seizures, MEG also localizes major functional centers in the brain that control movement, sensation, hearing, vision, and language, important for pre-surgical planning in neurosurgery.&#160; MEG can also detect abnormal brain rhythms including slow-waves, and thus sensitively detects abnormal brain function, including from traumatic brain injury, strokes, tumors, and other disorders.&#160; MEG is also a powerful research tool, enhancing our understanding of human brain function. It is being used to study a number of neurological disorders such as traumatic brain injury, epilepsy, autism, and stroke, as well as psychiatric disorders such as schizophrenia, dementia, and posttraumatic stress disorder. Lab equipment includes Elekta Neuromag VectorView 306-Channel MEG &amp; 128-Channel EEG machine in a 6-layer shielded room.</p>
+<p><strong>Active Recharge:</strong>&#160;No</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Radiology Imaging Lab MRI</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://ril.ucsd.edu/">http://ril.ucsd.edu/</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:rtheilmann@ucsd.edu">Rebecca Theilmann</a>, Professor</p>
+<p><strong>Alt. contact:&#160;</strong><a href="mailto:cjpung@ucsd.edu">Chris Pung</a></p>
+<p><strong>Department:</strong>&#160;Radiology</p>
+<p><strong>Description:</strong>&#160;The General Electric 1.5T Signa HDx 14.0 M5 TwinSpeed MRI system is capable of structural, functional, and diffusion tensor imaging, and of spectrocopy (MRS and CSI), in 8 channel acquisitions. Full access to pulse sequence programming environments is available using GE pulse programming language. The scanner is available for research scanning 24 hours a day and 7 days a week. Research scan time is scheduled through a web calendar system that is monitored and operated by the Department of Radiology at UCSD.</p>
+<p><strong>Active Recharge:</strong>&#160;No</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Research Cyberinfrastructure (RCI)</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <p><strong>Website:</strong>&#160;<a href="http://rci.ucsd.edu">rci.ucsd.edu</a></p>
+<p><strong>Project Manager:</strong>&#160;&#160;<a href="mailto:rci-info@ucsd.edu">Richard Moore</a></p>
+<p><strong>Faculty Chair:</strong>&#160;<a href="mailto:mgilson@ucsd.edu">Mike Gilson</a>, RCI Oversight Committee, Professor, School of Pharmacy</p>
+<p><strong>Implementation Partners:</strong>&#160;ACT, Qualcomm Institute, SDSC, UCSD Library, UCSD Office of Research Affairs</p>
+<p><strong>Description:</strong>&#160;RCI is a campus-wide UCSD-sponsored program that provides the colocation facilities, storage, data curation, high-performance computing, networking, and expertise to help UCSD investigators conduct their research projects. It consists of state-of-the-art, reliable, easy to use, cost-effective, and environmentally friendly cyberinfrastructure services located within and provided by UCSD.</p>
+<p>RCI services enable UCSD researchers&#160;to focus on their projects, get results, and protect their intellectual property by alleviating common bottlenecks in cyberinfrastructure. These services may be incorporated into both ongoing research projects and future grant applications. They are available at reduced cost to UCSD investigators with subsidy.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Rheumatic Diseases Core Center Animal Genetics Core</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <p><strong>Faculty Director:</strong>&#160;<a href="mailto:mpcorr@ucsd.edu">Maripat Corr</a>, Professor</p>
+<p><strong>Alt. contact:</strong></p>
+<p><strong>Department:</strong>&#160;Medicine</p>
+<p><strong>Description:</strong>&#160;The animal genetics core is one of three primary research support services of the UCSD Rheumatic Disease Core Center. The goal of the Rheumatic Diseases Core Center (RDCC) is to provide support to investigators studying the etiopathogenesis of the rheumatic diseases, and the response and efficacy of novel therapeutic agents. In the past, a substantial part of preclinical data has come from studies using rodent models. Modern techniques allow elegant genetic manipulation of the mouse genome with the creation of transgenics and knockouts. The use of these engineered mice to investigators interested in specific disease models can be limited by the strain's haplotype background. The chief goal of the Animal Genetics Core is to facilitate the generation of essential strains of mice that are not commercially available to researchers.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Rheumatic Diseases Core Center Biomarker Core</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <p><strong>Faculty Director:</strong>&#160;<a href="mailto:dboyle@ucsd.edu">David Boyle</a>, Research Scientist</p>
+<p><strong>Alt. contact:</strong></p>
+<p><strong>Department:</strong>&#160;Medicine</p>
+<p><strong>Description:</strong>&#160;The Biomarker Core is one of three primary research support services of the UCSD Rheumatic Disease Core Center. Biomarkers are biological indicators that signal a changed physiological state due to disease or a therapeutic intervention. In inflammatory diseases, typical biomarkers include cytokines (e.g., IL-1, TNF-alpha), metalloproteinases and small molecule mediators (e.g., prostaglandins). The availability of biomarker assays has directly led to the need to develop specialized techniques to evaluate their expression in peripheral blood or very small tissue samples from the site of disease.&#160;mRNA analysis: Real time PCR and in situ hybridization; Protein analysis:&#160;Immunohistochemistry, ELISA and western blot analysis.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">San Diego Supercomputer Center (SDSC)</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:&#160;</strong><a href="http://www.sdsc.edu/">www.sdsc.edu</a> 
+<p><strong>Faculty Director:</strong>&#160;Mike Norman</p>
+<p><strong>Alt. contact:</strong>&#160;Richard Moore</p>
+<p><strong>Services Contact:</strong>&#160;<a href="mailto:services@sdsc.edu">services@sdsc.edu</a></p>
+<p><strong>Department:</strong>&#160;San Diego Supercomputer Center (SDSC)</p>
+<p><strong>Description:&#160;</strong>The San Diego Supercomputer Center provides cyberinfrastructure resources and expertise to UCSD, UC, and UC industry partners. &#160;SDSC has over 20 years of experience working with&#160;large scale computational science problems across many disciplines, including health IT, chemistry, engineering, geophysics, and life sciences. Through SDSC, educational and industry partners can access a wide array of services including high performance cluster computing, virtualization, interactive and archive file storage solutions, web and database hosting, data analysis, physical and virtual colocation, technical business solutions, conference facilities,&#160;expert consulting services,&#160;and grant and proposal support.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">School of Medicine Light Microscopy Facility</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://neurosciencecore.ucsd.edu/">http://neurosciencecore.ucsd.edu/</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:jogleeson@ucsd.edu">Joseph Gleeson</a>, Assoc Prof</p>
+<p><strong>Main&#160;Contact:</strong>&#160;<a href="mailto:jsantini@ucsd.edu">Jennifer Santini</a>, Manging Director</p>
+<p><strong>Alt. Contact:</strong>&#160;<a href="mailto:kpestonjamasp@ucsd.edu">Kersi Pestonjamasp</a></p>
+<p><strong>Department:</strong>&#160;Neurosciences</p>
+<p><strong>Description:</strong>&#160;The School of Medicine, in conjunction with the&#160;UCSD Neuroscience Microscopy Shared Facility and the&#160;UCSD&#160;Moores Cancer Center Digital Imaging Facility, sponsors and maintains a state of the art Light Microscopy Facility that is available to&#160;UCSD Investigators on a recharge basis. Core equipment includes Olympus&#160;FV1000&#160;confocal (2), Olympus&#160;FV300&#160;confocal with 2 photon,&#160;Leica&#160;SP5&#160;confocal with 2photon, Applied Precision&#160;DeltaVision&#160;Deconvolution Microscope (2), Applied Precision&#160;OMX Super Resolution System, Nikon&#160;A1R&#160;Confocal and STORM Super Resolution System, Olympus&#160;MVX10 Macroview,&#160;MMI Cell Cut laser microdissection, Perkin Elmer Ultra View&#160;Vox Spinning Disk Confocal,&#160;Zeiss&#160;LSM 510 confocal,&#160;Hamamatsu&#160;Nanozoomer Slide Scanning System, Electrophysiology System.&#160; The core also has various image processing software for analysis, including Volocity, Image Pro Plus,&#160;Neurolucida and SoftWorx.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">SIO Hydraulics Lab</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://hydraulicslab.ucsd.edu/Welcome.html">http://hydraulicslab.ucsd.edu</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:gdeane@ucsd.edu">Grant Deane</a>, Professor</p>
+<p><strong>Alt. contact:</strong>&#160;<a href="mailto:pharvey@ucsd.edu">Paul Harvey</a></p>
+<p><strong>Department:</strong>&#160;Integrative Oceanography Division</p>
+<p><strong>Description:</strong>&#160;The function of the Hydraulics Laboratory is to provide expertise, space, facilities,&#160;and equipment for physical and biological oceanographic research. The Hydraulics Laboratory&#160;offers many testing facilities including a wind-wave channel, two flow channels, three pressure&#160;testing vessels, a deep tank, and a temperature/pressure calibration facility. An on-site machine&#160;shop, welding equipment, fabrication tools, and the in house expertise to use them greatly&#160;enhance the capability of the laboratory to serve a wide variety of scientific projects and&#160;research. The Hydraulics Laboratory also maintains a small pool of field instruments that can&#160;be made available to researchers. Custom: Wind Wave Channel, Glass Walled Wave Channel,&#160;Deep Tank (10m deep), Stratified Flow Channel, Pressure Test Chambers,&#160;Temperature/Pressure Calibration Facility, Rotating Table Facility, Ocean Atmosphere&#160;Research Pressure Facility, Ocean Atmosphere Research Pool, field instruments, machine,&#160;welding, and fabrication resources.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">SIO ICP-OES facility</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <p><strong>Faculty Director:</strong>&#160;Pat Castillo (<a href="mailto:pcastillo@ucsd.edu">pcastillo@ucsd.edu</a>)</p>
+<p><strong>Alternate contact:</strong>&#160;Chris MacIsaac (<a href="mailto:cmacisaac@ucsd.edu">cmacisaac@ucsd.edu</a>)</p>
+<p><strong>Department:</strong>&#160;SIO</p>
+<p><strong>Description:</strong>&#160;Perkin Elmer Optima 3000 DV ICP (optical emission spectrometer). This instrument provides fast and reliable analysis of major and minor elements of small samples in solution. Used for routine multi-element analysis (ppb to ppm range) of environmental, geological or biological samples.</p>
+<p><strong>Recharge:</strong>&#160;No current recharge</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">SIO ICP-MS facility</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <p><strong>Faculty Director:</strong>&#160;James Day (<a href="mailto:jmdday@ucsd.edu">jmdday@ucsd.edu</a>)</p>
+<p><strong>Department:</strong>&#160;SIO</p>
+<p><strong>Description:</strong>&#160;Thermoquest Finnigan Element 2 ICP (magnetic sector or high-resolution mass spectrometer). This instrument offers detection limits for most elements in the sub-ppb range as well as the capability to measured isotope ratios. Laser ablation unit is also available in analysis of solids in situ. Used for routine multi-element analysis (ppb to ppm range) of environmental, geological or biological samples.&#160;The instrument is currently in transition to a new management plan designed to first address SIO user needs, with additional access envisioned in the future.</p>
+<p><strong>Recharge:</strong>&#160;No</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">SIO Instrument Development Group</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <p><strong>Faculty Director:</strong>&#160;<a href="mailto:redavis@ucsd.edu">Russ Davis</a>, Res Scientist</p>
+<p><strong>Alt. contact:&#160;</strong><a href="mailto:jtsherman@ucsd.edu">Jeffrey Sherman</a></p>
+<p><strong>Department:</strong>&#160;Climate Atmospheric Science &amp; Physical Oceanography</p>
+<p><strong>Description:</strong>&#160;Design, construction and operation of a range of oceanographic instruments including ones based on autonomous profiling floats and underwater gliders.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">SIO Marine Sciences Development Center</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://sioms.ucsd.edu/">http://sioms.ucsd.edu/</a> 
+<p><strong>Facility Director:</strong>&#160;<a href="mailto:kduff@ucsd.edu">Kenneth Duff</a>, Senior Shop Superintendent</p>
+<p><strong>Alt. contact:</strong>&#160;<a href="mailto:rklidy@ucsd.edu">Rob Klidy</a>&#160;(Machine Shop),&#160;<a href="mailto:tnthomas@ucsd.edu">Travis Thomas</a>&#160;(Weld Shop)</p>
+<p><strong>Department:</strong>&#160;Marine Sciences Development Center, Scripps Institution of Oceanography</p>
+<p><strong>Description:</strong>&#160;The Marine Science Development Center (MSDC) specializes in the design, development, fabrication, and assembly of oceanographic, space, and general scientific hardware from minute laser components to large-scale integrated systems. MSDC serves SIO, UCSD, various other institutions, and the private sector. Truly a one stop shop, we offer our clients a wide range of services that include, but are not limited to, the following: Additive Manufacturing, Engineering, Machining, Fabrication &#8211; in house and in the field, X-ray certified welding, Inspection, Assembly, Surface coating, High vacuum expertise and Field support. MSDC services are available on Marketplace, but please feel free to contact the office directly at (858) 534-2940 with any inquiries.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">SIO Research Vessels</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://shipsked.ucsd.edu/">http://shipsked.ucsd.edu/</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:tba@ucsd.edu">Bruce Applegate</a>, SIO Associate Director</p>
+<p><strong>Alt. contact:</strong>&#160;<a href="mailto:zkelety@ucsd.edu">Zoltan Kelety</a>&#160;(Marine Superintendent) and&#160;<a href="mailto:woodys@ucsd.edu">Woody Sutherland</a>&#160;(Marine Technical Support)</p>
+<p><strong>Department:</strong>&#160;Scripps Institution of Oceanography</p>
+<p><strong>Description:</strong>&#160;Scripps Institution of Oceanography operates major seagoing oceanographic research vessels, which are managed and available as general shared-use facilities. &#160;Each vessel features state-of-the-art research instrumentation, communications equipment, and laboratory facilities equipped to study the biology, physics, chemistry and geology of the world's oceans on cruises that may be as short as one day, or as long as two months at sea. &#160;Scripps ships are home-ported at the UCSD/SIO Nimitz Marine Facility in Point Loma, and managed by Scripps's Ship Operations &amp; Marine Technical Support (SOMTS) as shared-use facilities in collaboration with the University-National Oceanographic Laboratory System (UNOLS), which provides an organizational framework through which scientists and research programs are matched with appropriate research vessels.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">SIO Stable Isotope Facility</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <p><strong>Faculty Director:</strong>&#160;Chris Charles (<a href="mailto:ccharles@ucsd.edu">ccharles@ucsd.edu</a>) for MAT253</p>
+<p><strong>Faculty Director:</strong>&#160;Dave Hilton (<a href="mailto:drhiltons@ucsd.edu">drhiltons@ucsd.edu</a>) for DeltaPlus, CHN</p>
+<p><strong>Alternate Contact:</strong>&#160;Bruce Deck (<a href="mailto:bdeck@ucsd.edu">bdeck@ucsd.edu</a>)</p>
+<p><strong>Department:</strong>&#160;SIO</p>
+<p><strong>Description:</strong>&#160;The facility includes two stable isotope mass spectrometers (for high precision measurement of&#160;<sup>3</sup>C,&#160;<sup>15</sup>N,&#160;<sup>18</sup>O)&#160;and a CHN elemental analyzer. A Thermofinnigan DeltaPlus stable isotope mass spectrometer can be interfaced with either a combustion analyzer or gas bench for DIC/carbonate samples. A ThermoFisher&#160;MAT253 mass spectrometer provides comparable analyses with a Kiel IV carbonate device. A&#160;Costech 4010 Elemental combustion analyzer is also available for determination of C% and N% of organic and inorganic solid samples.</p>
+<p><strong>Recharge:</strong>&#160;No current recharge</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">SSPPS NMR Facility</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://sopnmr.ucsd.edu/">http://sopnmr.ucsd.edu</a> 
+<p><strong>Facility Director:</strong>&#160;<a href="mailto:bmduggan@ucsd.edu">Brendan Duggan</a>, Associate Project Scientist</p>
+<p><strong>Department:</strong>&#160;Skaggs School of Pharmacy and Pharmaceutical Sciences</p>
+<p><strong>Description:</strong>&#160;The Skaggs School of Pharmacy and Pharmaceutical Sciences NMR facility provides access to nuclear magnetic resonance spectrometers. &#160;The facility houses two 600 MHz NMR spectrometers each consisting of a 14.1 Telsa Magnex magnet, a Bruker Avance III console and a Bruker cryoplatform. &#160;One instrument is normally fitted with a 1.7mm inverse detection triple resonance (H-C/N/D) cryoprobe for analysis of microgram quantities of material. &#160;The other instrument is typically fitted with a 5mm inverse detection triple resonance (H-C/N/D) cryoprobe to acquire data on proteins and nucleic acids. &#160;Access to the facility is available to all UCSD researchers on a recharge basis, as well as external entities.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Structural Systems Lab</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <p><strong>Faculty Director:</strong>&#160;<a href="mailto:lberman@ucsd.edu">Laurance Berman</a>, Operations Mgr&#160;</p>
+<p><strong>Department:</strong>&#160;Jacobs School of Engineering</p>
+<p><strong>Description:</strong>&#160;The Structural Systems Laboratory has a 15 m high reaction wall for the full scale pseudo-dynamic testing of up to 5-story buildings with 10 degrees-of-freedom or bridge systems with 35 m in length.</p>
+<p><strong>Active Recharge:</strong>&#160;No</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">VA/VMRF Core for Micro Imaging</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website</strong>:&#160;<a href="http://www.vmrf.org/researchcenters/confocal/confocal.html">http://www.vmrf.org/researchcenters/confocal/confocal.html</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:memurphy@ucsd.edu">Mark Murphy</a>, Assoc Clin Prof</p>
+<p><strong>Alt. contact:</strong>&#160;<a href="mailto:jmassie@ucsd.edu">Jennifer Massie</a></p>
+<p><strong>Department:</strong>&#160;Orthopaedic Surgery, VASDHS, VMRF</p>
+<p><strong>Description:</strong>&#160;The Core Microscope Facility located in the VA Medical Center in San Diego is a full service microscope facility serving the entire UCSD, VA and Biotech community. We are a fee-for-service lab that can perform Transmission Electron Microscopy (TEM), confocal microscopy and histology.&#160;We have recently added an image processing computer loaded with Image Pro Plus and ImageJ.&#160;In the future we will be adding a micro CT to our list of services. Core equipment inlcudes Zeiss EM10C, Zeiss LSM 510, Zeiss LSM 5 Pascal, Leica Ultra-cut S ultramicrotome, Zeiss Photomicroscope 3, GE eXplore Rs micro CT, and a Leica CM 3050S.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">VA/VMRF FACS Core</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://www.vmrf.org/researchcenters/facs-recharge/facs.html">http://www.vmrf.org/researchcenters/facs-recharge/facs.html</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:jwrodriguez@ucsd.edu">Jessica Wang-Rodriguez</a>, Professor</p>
+<p><strong>Alt. contact:&#160;</strong><a href="mailto:Mary.Keller@va.gov">Fran Keller</a></p>
+<p><strong>Department:</strong>&#160;Pathology, VASDHS, VMRF</p>
+<p><strong>Description:</strong>&#160;Core provides measurement of human B and T cell populations.&#160; T-Cell Subsets, including Adult and Pediatric ACTG (AIDS Clinical Trial Group) protocols, AEHIV quantitation. Additional custom tailored markers and flow studies, i.e. intracellular cytokine per request of PI. Core equipment includes 2 BD FACSCaliburs, and 2 BD FACSCantos (6 color and 8 color).</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">VA/VMRF Microarray &amp; NGS Core</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://www.vmrf.org/researchcenters/microarray-ngs/contact-us.html">http://www.vmrf.org/researchcenters/microarray-ngs/contact-us.html</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:nwebster@ucsd.edu">Nicholas Webster</a>, Professor</p>
+<p><strong>Alt. contact:&#160;</strong><a href="mailto:genechip@vapop.ucsd.edu">Jorge Valencia</a>, (858) 552 8585 ext.7100</p>
+<p><strong>Department:</strong>&#160;Medicine, VASDHS, VMRF, UCSD Moores Cancer Center and Diabetes Research Center</p>
+<p><strong>Description:</strong>&#160;The Core provides microarray and next-generation sequencing services.&#160; High-density oligonucleotide microarray technology is based on the Affymetrix GeneChip and Nimblegen platforms. These platforms allow researchers to perform RNA expression profiling in multiple prokaryotic and eukaryotic species, as well as DNA genetic analyses such as single-nucleotide polymorphism (SNP) assays, resequencing, loss-of-heterozygosity, comparative genomic hybridization, whole genome transcription factor localization, ChIP-on-chip, comparative genomic hybridization (CGH), and mitochondrial mutation detection, and miRNA expression profiling on Exiqon and Invitrogen arrays. Core also provides next-generation sequencing (NGS) services based on the long-read Roche 454 Genome FLX system for microbial genome assembly, microbiome diversity, viral isolate deep sequencing, TCR and Ig rearrangement, transcriptome sequencing, and novel genome sequencing. Sequence enrichment is also available using a Fluidigm AccessArray system for amplicon amplification from multilple samples (48 amplicons from 48 samples), exome enrichment using Agilent or Nimblegen solution capture, or genomic locus enrichment using Agilent or Nimblegen arrays to provide samples for high-throughput sequencing.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">VA/VMRF Muscle Tissue Core</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://www.vmrf.org/researchcenters/muscle-tissue/muscle.html">http://www.vmrf.org/researchcenters/muscle-tissue/muscle.html</a> 
+<p><strong>Faculty Director</strong>:&#160;<a href="mailto:tciaraldi@ucsd.edu">Ted Ciaraldi</a>, Research Scientist&#160;</p>
+<p><strong>Department:</strong>&#160;Medicine, VASDHS, VMRF</p>
+<p><strong>Description:</strong>&#160;Culture of human muscle cells&#160; Primary culture of human adipose tissue and muscle cells&#160; Assay of metabolic fluxes in cells and tissues&#160; Determination of glucose specific activity from infusion of labeled glucose.&#160;Multiplex analysis of factors in the circulation and media.&#160;Bio-Rad BioPlex 200</p>
+<p><strong>Active Recharge:</strong>&#160;No</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">VA/VMRF Synthetic Chemistry Core</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://www.vmrf.org/researchcenters/synthetic-chemical/synthetic.html">http://www.vmrf.org/researchcenters/synthetic-chemical/synthetic.html</a> 
+<p><strong>Faculty Director:</strong>&#160;Robert Purdy</p>
+<p><strong>Department:</strong>&#160;VASDHS, VMRF<strong><br/>
+</strong></p>
+<p><strong>Description:</strong>&#160;Provides research services for investigators studying the physiological function of neurosteroids in the central nervous system and peripheral tissues. Neurosteroid compounds and their analogs are synthesized to a high degree of purity for peripheral and central administration to sub-human primates and rodents.</p>
+<p><strong>Active Recharge:</strong>&#160;No</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Vector Development Lab</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <strong>Website:</strong>&#160;<a href="http://www.pediatrics.ucsd.edu/Research/Labs/Atsushi%20Miyanohara%20PhD%20-%20Vecto/Pages/default.aspx">http://www.pediatrics.ucsd.edu/Research/Labs/Atsushi Miyanohara PhD - Vecto/Pages/default.aspx</a> 
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:amiyanohara@ucsd.edu">Atsushi Miyanohara</a>, Dir/Vector Lab&#160;</p>
+<p><strong>Department:</strong>&#160;Pediatrics</p>
+<p><strong>Description:</strong>&#160;Development and production of primarily viral vectors (Retovirus, Lentivirus, Adenovirus, Adeno-associated virus) and services related to gene transfer.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">Warren Recording Studios</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <p><strong>Faculty Director:</strong>&#160;<a href="mailto:potto@ucsd.edu">Peter Otto</a>, Music Tech Dir</p>
+<p><strong>Department:</strong>&#160;Music</p>
+<p><strong>Description:</strong>&#160;Two large recording studios (each measuring 50' x 60'); Control room (20'x30');&#160;Isolated machine room; Seminar room; Two practice studios.</p>
+<p><strong>Active Recharge:</strong>&#160;No</p>
+        </div>
+       
+            
+                
+        <h2 class="accordion_head">
+        <a href="#">X-ray Crystallography</a>
+        </h2>
+        
+        <div class="accordion_body">
+        <p><strong>Website:</strong>&#160;<a href="http://crystals.ucsd.edu/">http://crystals.ucsd.edu/</a></p>
+<p><strong>Faculty Director:</strong>&#160;<a href="mailto:arheingold@ucsd.edu">Arnold Rheingold</a>, Professor IR</p>
+<p><strong>Facility Manager:</strong>&#160;Curtis Moore, PhD, Project Scientist, (<a href="mailto:cmoore@ucsd.edu">cmoore@ucsd.edu</a>)</p>
+<p><strong>Department:</strong>&#160;Chemistry &amp; Biochemistry</p>
+<p><strong>Description:</strong>&#160;Provides single-crystal and powder characterization of small molecules and macromolecular materials including the determination of absolute-stereochemistry.&#160; Provides crystallization services for APIs and other materials of interest.&#160; Core equipment for single-crystal determinations includes a Bruker Cu rotating-anode generator with two diffractometers, a Bruker APEX II Ultra equipped with a &#160;microfocus Mo Turbo X-ray Source (TXS) rotating anode, and a Bruker X8 APEX II system (Mo sealed tube).&#160; &#160;&#160;All single-crystal diffractometers are equipped with low-temperature cryostats.&#160; For powder diffraction a Bruker D8 Advance is available.</p>
+<p><strong>Active Recharge:</strong>&#160;Yes</p>
+        </div>
+       
+    
+</div>
+<p><a class="expand_accordion" href="#">Expand all</a></p>
+
+
+
+            <div class="blink_question">For more information, contact the ORA main desk&#160;at (<span>858) 534-9758.</span></div>
+    
+
+        
+    
+        
+        <div class="additional-text"><content/></div>
+            
+
+   
+    
+             
+        
+</div>             
+        
+    <div id="tdr_2_col_nav">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+        
+        
+        
+                
+        
+    
+  
+
+
+<div id="nav-wrapper"> 
+                <span id="site-logo">
+            <logo/>
+        </span>
+        
+                            <div class="styled">
+                                                                                            
+            
+        <h2>
+               <a href="index.html">Conducting Research</a>
+            </h2>
+                
+                    <ul id="page_nav">
+                            
+                                                        
+                                                                                                                        
+                                                                
+                                                                                                <li class="">
+                <a href="controlled-substances.html">
+        Controlled Substances 
+        </a>
+            </li>   
+                                                                                    
+                                                        
+                                                                                                                                            
+                                                                
+                                                                                                <li class="active">
+                Core Shared Facilities 
+            </li>   
+                                                                                    
+                                                        
+                                                                
+                                                                
+                                                                                                <li class="">
+                <a href="http://postdoc.ucsd.edu/">
+        Postdocs &amp; Visiting Scholars 
+        </a>
+            </li>   
+                                                                                    
+                                                        
+                                                                                                                        
+                                                                
+                                                                                                <li class="">
+                <a href="safety.html">
+        Research Safety 
+        </a>
+            </li>   
+                                                                                    
+                                                        
+                                                
+                                
+                                                                
+                                                                                                <li class="collapsed">
+                <a href="shipping-receiving/index.html">
+        Shipping &amp; Receiving 
+        </a>
+            </li>   
+                                                                                    
+                                                        
+                                                                                                                        
+                                                                
+                                                                                                <li class="">
+                <a href="staffing.html">
+        Staffing for Research Projects 
+        </a>
+            </li>   
+                                                                                    
+                                                        
+                                                                                                                        
+                                                                
+                                                                                                                                        
+                                                        
+                                                
+                                
+                                                                
+                                                                                                <li class="collapsed">
+                <a href="compliance-review/index.html">
+        Compliance 
+        </a>
+            </li>   
+                                                                                    
+                                                        
+                                                
+                                
+                                                                
+                                                                                                <li class="collapsed">
+                <a href="material-transfers/index.html">
+        Material Transfers 
+        </a>
+            </li>   
+                                                                                    </ul>
+            </div>
+                
+        
+    
+     
+
+</div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+
+
+
+
+        </div>    
+    </div>
+    
+</div>
+<div id="tdr_footer">
+<div id="tdr_footer_content">
+
+
+
+
+<div id="tdr_address">
+    <span id="tdr_address_place">UC San Diego</span>
+    <span id="tdr_address_street">9500 Gilman Dr.</span>
+    <span id="tdr_address_city_state_zip">La Jolla, CA 92093</span>
+    <span id="tdr_address_phone">(858) 534-2230</span>
+</div>
+<div id="tdr_copyright">Copyright ©<span id="tdr_copyright_year">2015</span> Regents of the University of California. All rights reserved.</div>
+<ul id="tdr_footer_links">
+    <li><a href="http://www.ucsd.edu/_about/legal/index.html">Terms &amp; Conditions</a></li>
+    <li id="tdr_footer_feedback">
+            
+                        <a href="http://act.ucsd.edu/cwp/feedback/tool/blink">Feedback</a>
+                        </li>
+</ul>
+
+        <script src="https://act.ucsd.edu/decorators/js/decorator.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    (function($) {
+        $(document).ready(function() {
+                    initFooter("http://act.ucsd.edu/cwp/feedback/tool/blink");
+                    initCopyright();
+        });
+    })(jQuery);
+    </script>  
+    
+    
+
+            <script type="text/javascript">
+// <![CDATA[
+var _gaq = _gaq || [];
+ _gaq.push(['_setAccount', 'UA-3409104-3']);
+ _gaq.push(['_trackPageview']);
+
+ (function() {
+   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+ })();
+// ]]>
+</script>  
+    </div>
+</div>
+</body>
+</html>

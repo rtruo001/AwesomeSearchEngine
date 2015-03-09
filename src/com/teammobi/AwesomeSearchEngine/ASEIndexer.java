@@ -36,28 +36,21 @@ public class ASEIndexer {
 		    config = new IndexWriterConfig(contextAnalyzer);
 		    indexWriter = new IndexWriter(contextDirectory, config);
 			//System.out.println(dirPath);
-			if(!Files.exists(Paths.get(dirPath)) ){
+			if(!Files.exists(Paths.get(dirPath)))
 				System.out.println("not even there bro");
-			}
 			Files.walk(Paths.get(dirPath)).forEach(filePath -> {
-				
-			    if (Files.isRegularFile(filePath)) {
-			        //System.out.println(filePath);
+				if(Files.isRegularFile(filePath))
 			    	parseAndIndex(filePath.toString());
-			    }
 			});
 			indexWriter.close();
-		}catch(IOException e){}
+		}catch(IOException e){ e.printStackTrace(); }
 	}
 	
 	private void parseAndIndex(String filePath){
-	    
 		try{
 			File input = new File(filePath);
 			Document doc = Jsoup.parse(input, "UTF-8", "");
-			//System.out.println(doc.title());
-			//System.out.println(doc.body().text());
-			addDoc(doc.title(), doc.body().text(), "193398817");
+			addDoc(doc.title(), doc.body().text(), "");
 			
 		}catch(IOException e){System.out.println(e.getMessage());}
 	}

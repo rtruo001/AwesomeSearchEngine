@@ -13,6 +13,7 @@ import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.RAMDirectory;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
@@ -24,6 +25,7 @@ public class ASEQuery extends HttpServlet {
 	private AwesomeSearchEngine searchEngine;
 	
 	private static String websitesDir;
+	private static JSONObject errorJSON;
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -33,51 +35,35 @@ public class ASEQuery extends HttpServlet {
         searchEngine = new AwesomeSearchEngine();
         websitesDir = null;
         
-//        if(getServletContext() == null){
-//        	System.out.println("wtf");
-//        }
-//        websitesDir = getServletContext().getRealPath("/WEB-INF/");
-//        System.out.println(websitesDir);
-//        searchEngine.index(websitesDir);
-//        try{
-//        PrintWriter writer = new PrintWriter("hehe.txt", "UTF-8");
-//        writer.println("The first line");
-//        writer.println("The second line");
-//        writer.close();
-//        }catch(Exception e){System.out.println("cant do it bro"); e.printStackTrace();}
+        errorJSON = new JSONObject();
+        try{ errorJSON.put("error", "No query given."); }
+        catch(JSONException e){ e.printStackTrace(); }
+        
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//HttpServletRequest getParameter
-		PrintWriter out = response.getWriter();
-		
+	
 		if(websitesDir == null){
 			websitesDir = getServletContext().getRealPath("/WEB-INF/websites/");
 			System.out.println("New instance: " + websitesDir);
 			searchEngine.index(websitesDir);
-		}else{
-			System.out.println("Previous instance: " + websitesDir);
 		}
+		else System.out.println("Previous instance: " + websitesDir);
 		
-		//String query = "ucr alumni";
+		PrintWriter out = response.getWriter();
 		String query = request.getParameter("query");
-		System.out.println("Query String: " + query);
-		JSONObject result = searchEngine.search(query);
-		
-		if(result == null){
-			out.println("damn");
+		if(query == null){
+			out.println(errorJSON.toString());
 		}else{
-			out.println(result.toString());
-		}
-		
-		out.close();
-		
-		//new BooleanQuery();
-		
+			System.out.println("Query String: " + query);
+			JSONObject result = searchEngine.search(query);
+			if(result == null) out.println(errorJSON.toString());
+			else out.println(result.toString());
+			out.close();
+		}	
 	}
 
 	/**
