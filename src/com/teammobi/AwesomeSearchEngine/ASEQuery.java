@@ -2,6 +2,8 @@ package com.teammobi.AwesomeSearchEngine;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Arrays;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -45,7 +47,9 @@ public class ASEQuery extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
+
+		response.setHeader("Access-Control-Allow-Origin", "*");
+		
 		if(websitesDir == null){
 			websitesDir = getServletContext().getRealPath("/WEB-INF/websites/");
 			System.out.println("New instance: " + websitesDir);
