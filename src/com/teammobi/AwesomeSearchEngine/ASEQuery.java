@@ -64,7 +64,7 @@ public class ASEQuery extends HttpServlet {
 		}
 		
 		//String query = "ucr alumni";
-		String query = request.getQueryString();
+		String query = request.getParameter("query");
 		System.out.println("Query String: " + query);
 		JSONObject result = searchEngine.search(query);
 		
